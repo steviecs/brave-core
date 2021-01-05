@@ -91,7 +91,7 @@ void AdsTabHelper::OnJavaScriptResult(
   std::string content;
   value.GetAsString(&content);
 
-  ads_service_->OnPageLoaded(tab_id_, redirect_chain_, content);
+  ads_service_->OnPageLoaded(tab_id_, redirect_chain_, /*html, */ content);  // TODO(Moritz Haller): add html
 }
 
 void AdsTabHelper::DidFinishNavigation(
