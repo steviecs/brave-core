@@ -34,13 +34,11 @@ class RedeemUnblindedPaymentTokensUrlRequestBuilder : UrlRequestBuilder {
 
   std::vector<std::string> BuildHeaders() const;
 
-  std::string BuildBody(
-      const std::string& payload) const;
+  std::string BuildBody(const std::string& payload) const;
 
   std::string CreatePayload() const;
 
-  base::Value CreatePaymentRequestDTO(
-      const std::string& payload) const;
+  base::Value CreatePaymentRequestDTO(const std::string& payload) const;
 
   base::Value CreateCredential(
       const privacy::UnblindedTokenInfo& unblinded_token,
@@ -49,4 +47,4 @@ class RedeemUnblindedPaymentTokensUrlRequestBuilder : UrlRequestBuilder {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_URL_REQUEST_BUILDER_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_URL_REQUEST_BUILDER_H_  NOLINT

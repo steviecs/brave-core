@@ -17,10 +17,9 @@ namespace ads {
 
 const uint64_t kAdNotificationsPerDayFrequencyCap = 40;
 
-class AdsPerDayFrequencyCap : public PermissionRule  {
+class AdsPerDayFrequencyCap : public PermissionRule {
  public:
-  AdsPerDayFrequencyCap(
-      const AdEventList& ad_events);
+  explicit AdsPerDayFrequencyCap(const AdEventList& ad_events);
 
   ~AdsPerDayFrequencyCap() override;
 
@@ -36,13 +35,11 @@ class AdsPerDayFrequencyCap : public PermissionRule  {
 
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const AdEventList& ad_events);
+  bool DoesRespectCap(const AdEventList& ad_events);
 
-  AdEventList FilterAdEvents(
-      const AdEventList& ad_events) const;
+  AdEventList FilterAdEvents(const AdEventList& ad_events) const;
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_ADS_PER_DAY_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_ADS_PER_DAY_FREQUENCY_CAP_H_  NOLINT

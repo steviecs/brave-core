@@ -16,24 +16,19 @@ namespace ads {
 
 struct CatalogIssuersInfo {
   CatalogIssuersInfo();
-  CatalogIssuersInfo(
-      const CatalogIssuersInfo& info);
+  CatalogIssuersInfo(const CatalogIssuersInfo& info);
   ~CatalogIssuersInfo();
 
-  bool operator==(
-      const CatalogIssuersInfo& rhs) const;
-  bool operator!=(
-      const CatalogIssuersInfo& rhs) const;
+  bool operator==(const CatalogIssuersInfo& rhs) const;
+  bool operator!=(const CatalogIssuersInfo& rhs) const;
 
   base::Value ToDictionary() const;
 
-  bool FromDictionary(
-      base::Value* dictionary);
+  bool FromDictionary(base::Value* dictionary);
 
   bool IsValid() const;
 
-  bool PublicKeyExists(
-      const std::string& public_key) const;
+  bool PublicKeyExists(const std::string& public_key) const;
 
   base::Optional<double> GetEstimatedRedemptionValue(
       const std::string& public_key) const;

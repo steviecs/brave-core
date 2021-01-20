@@ -8,10 +8,10 @@
 
 #include <string>
 
-#include "url/gurl.h"
 #include "bat/ads/internal/ad_targeting/data_types/behavioral/purchase_intent/purchase_intent_signal_info.h"
 #include "bat/ads/internal/ad_targeting/processors/processor.h"
 #include "bat/ads/internal/ad_targeting/resources/behavioral/purchase_intent/purchase_intent_resource.h"
+#include "url/gurl.h"
 
 namespace ads {
 namespace ad_targeting {
@@ -19,32 +19,26 @@ namespace processor {
 
 class PurchaseIntent : public Processor<GURL> {
  public:
-  PurchaseIntent(
-      resource::PurchaseIntent* resource);
+  explicit PurchaseIntent(resource::PurchaseIntent* resource);
 
   ~PurchaseIntent() override;
 
-  void Process(
-      const GURL& url) override;
+  void Process(const GURL& url) override;
 
  private:
   resource::PurchaseIntent* resource_;  // NOT OWNED
 
-  PurchaseIntentSignalInfo ExtractSignal(
-      const GURL& url) const;
+  PurchaseIntentSignalInfo ExtractSignal(const GURL& url) const;
 
-  PurchaseIntentSiteInfo GetSite(
-      const GURL& url) const;
+  PurchaseIntentSiteInfo GetSite(const GURL& url) const;
 
-  SegmentList GetSegmentsForSearchQuery(
-      const std::string& search_query) const;
+  SegmentList GetSegmentsForSearchQuery(const std::string& search_query) const;
 
-  uint16_t GetFunnelWeightForSearchQuery(
-      const std::string& search_query) const;
+  uint16_t GetFunnelWeightForSearchQuery(const std::string& search_query) const;
 };
 
 }  // namespace processor
 }  // namespace ad_targeting
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_PROCESSORS_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_PROCESSOR_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_PROCESSORS_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_PROCESSOR_H_  NOLINT

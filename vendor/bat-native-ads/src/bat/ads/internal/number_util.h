@@ -8,9 +8,7 @@
 
 namespace ads {
 
-bool DoubleEquals(
-    const double a,
-    const double b);
+bool DoubleEquals(const double a, const double b);
 
 }  // namespace ads
 

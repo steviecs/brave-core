@@ -24,8 +24,10 @@
 
 namespace ads {
 
-using GetCreativeAdNotificationsCallback = std::function<void(const Result,
-    const std::vector<std::string>&, const CreativeAdNotificationList&)>;
+using GetCreativeAdNotificationsCallback =
+    std::function<void(const Result,
+                       const std::vector<std::string>&,
+                       const CreativeAdNotificationList&)>;
 
 namespace database {
 namespace table {
@@ -36,28 +38,21 @@ class CreativeAdNotifications : public Table {
 
   ~CreativeAdNotifications() override;
 
-  void Save(
-      const CreativeAdNotificationList& creative_ad_notifications,
-      ResultCallback callback);
+  void Save(const CreativeAdNotificationList& creative_ad_notifications,
+            ResultCallback callback);
 
-  void Delete(
-      ResultCallback callback);
+  void Delete(ResultCallback callback);
 
-  void GetForSegments(
-      const SegmentList& segments,
-      GetCreativeAdNotificationsCallback callback);
+  void GetForSegments(const SegmentList& segments,
+                      GetCreativeAdNotificationsCallback callback);
 
-  void GetAll(
-      GetCreativeAdNotificationsCallback callback);
+  void GetAll(GetCreativeAdNotificationsCallback callback);
 
-  void set_batch_size(
-      const int batch_size);
+  void set_batch_size(const int batch_size);
 
   std::string get_table_name() const override;
 
-  void Migrate(
-      DBTransaction* transaction,
-      const int to_version) override;
+  void Migrate(DBTransaction* transaction, const int to_version) override;
 
  private:
   void InsertOrUpdate(
@@ -72,22 +67,17 @@ class CreativeAdNotifications : public Table {
       DBCommand* command,
       const CreativeAdNotificationList& creative_ad_notifications);
 
-  void OnGetForSegments(
-      DBCommandResponsePtr response,
-      const SegmentList& segments,
-      GetCreativeAdNotificationsCallback callback);
+  void OnGetForSegments(DBCommandResponsePtr response,
+                        const SegmentList& segments,
+                        GetCreativeAdNotificationsCallback callback);
 
-  void OnGetAll(
-      DBCommandResponsePtr response,
-      GetCreativeAdNotificationsCallback callback);
+  void OnGetAll(DBCommandResponsePtr response,
+                GetCreativeAdNotificationsCallback callback);
 
-  CreativeAdNotificationInfo GetFromRecord(
-      DBRecord* record) const;
+  CreativeAdNotificationInfo GetFromRecord(DBRecord* record) const;
 
-  void CreateTableV9(
-      DBTransaction* transaction);
-  void MigrateToV9(
-      DBTransaction* transaction);
+  void CreateTableV9(DBTransaction* transaction);
+  void MigrateToV9(DBTransaction* transaction);
 
   int batch_size_;
 

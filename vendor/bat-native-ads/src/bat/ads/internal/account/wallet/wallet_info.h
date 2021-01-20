@@ -12,17 +12,14 @@ namespace ads {
 
 struct WalletInfo {
   WalletInfo();
-  WalletInfo(
-      const WalletInfo& info);
+  WalletInfo(const WalletInfo& info);
   ~WalletInfo();
 
   bool IsValid() const;
 
-  bool operator==(
-      const WalletInfo& rhs) const;
+  bool operator==(const WalletInfo& rhs) const;
 
-  bool operator!=(
-      const WalletInfo& rhs) const;
+  bool operator!=(const WalletInfo& rhs) const;
 
   std::string id;
   std::string secret_key;

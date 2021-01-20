@@ -24,11 +24,9 @@ class Catalog {
 
   ~Catalog();
 
-  bool FromJson(
-      const std::string& json);
+  bool FromJson(const std::string& json);
 
-  bool HasChanged(
-      const std::string& catalog_id) const;
+  bool HasChanged(const std::string& catalog_id) const;
 
   std::string GetId() const;
   int GetVersion() const;

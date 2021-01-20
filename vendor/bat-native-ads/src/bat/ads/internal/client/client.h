@@ -42,15 +42,13 @@ class Client {
 
   static bool HasInstance();
 
-  void Initialize(
-      InitializeCallback callback);
+  void Initialize(InitializeCallback callback);
 
   FilteredAdList get_filtered_ads() const;
   FilteredCategoryList get_filtered_categories() const;
   FlaggedAdList get_flagged_ads() const;
 
-  void AppendAdHistoryToAdsHistory(
-      const AdHistoryInfo& ad_history);
+  void AppendAdHistoryToAdsHistory(const AdHistoryInfo& ad_history);
   const std::deque<AdHistoryInfo>& GetAdsHistory() const;
   void AppendToPurchaseIntentSignalHistoryForSegment(
       const std::string& segment,
@@ -71,39 +69,31 @@ class Client {
   CategoryContentInfo::OptAction ToggleAdOptOutAction(
       const std::string& category,
       const CategoryContentInfo::OptAction action);
-  bool ToggleSaveAd(
-      const std::string& creative_instance_id,
-      const std::string& creative_set_id,
-      const bool saved);
-  bool ToggleFlagAd(
-      const std::string& creative_instance_id,
-      const std::string& creative_set_id,
-      const bool flagged);
+  bool ToggleSaveAd(const std::string& creative_instance_id,
+                    const std::string& creative_set_id,
+                    const bool saved);
+  bool ToggleFlagAd(const std::string& creative_instance_id,
+                    const std::string& creative_set_id,
+                    const bool flagged);
 
-  void UpdateSeenAdNotification(
-      const std::string& creative_instance_id);
+  void UpdateSeenAdNotification(const std::string& creative_instance_id);
   const std::map<std::string, uint64_t>& GetSeenAdNotifications();
-  void ResetSeenAdNotifications(
-      const CreativeAdNotificationList& ads);
+  void ResetSeenAdNotifications(const CreativeAdNotificationList& ads);
 
-  void UpdateSeenAdvertiser(
-      const std::string& advertiser_id);
+  void UpdateSeenAdvertiser(const std::string& advertiser_id);
   const std::map<std::string, uint64_t>& GetSeenAdvertisers();
-  void ResetSeenAdvertisers(
-      const CreativeAdNotificationList& ads);
+  void ResetSeenAdvertisers(const CreativeAdNotificationList& ads);
 
-  void SetNextAdServingInterval(
-      const base::Time& next_check_serve_ad_date);
+  void SetNextAdServingInterval(const base::Time& next_check_serve_ad_date);
   base::Time GetNextAdServingInterval();
 
   void AppendTextClassificationProbabilitiesToHistory(
       const TextClassificationProbabilitiesMap& probabilities);
   const TextClassificationProbabilitiesList&
-      GetTextClassificationProbabilitiesHistory();
+  GetTextClassificationProbabilitiesHistory();
 
   std::string GetVersionCode() const;
-  void SetVersionCode(
-      const std::string& value);
+  void SetVersionCode(const std::string& value);
 
   void RemoveAllHistory();
 

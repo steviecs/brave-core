@@ -15,14 +15,13 @@
 namespace ads {
 
 class AdsHistoryDateRangeFilter {
- public :
+ public:
   AdsHistoryDateRangeFilter();
   ~AdsHistoryDateRangeFilter();
 
-  std::deque<AdHistoryInfo> Apply(
-      const std::deque<AdHistoryInfo>& history,
-      const uint64_t from_timestamp,
-      const uint64_t to_timestamp) const;
+  std::deque<AdHistoryInfo> Apply(const std::deque<AdHistoryInfo>& history,
+                                  const uint64_t from_timestamp,
+                                  const uint64_t to_timestamp) const;
 };
 
 }  // namespace ads

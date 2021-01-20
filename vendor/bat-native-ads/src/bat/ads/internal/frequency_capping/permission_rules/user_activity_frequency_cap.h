@@ -29,10 +29,9 @@ class UserActivityFrequencyCap : public PermissionRule {
  private:
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const UserActivityEventHistoryMap& history);
+  bool DoesRespectCap(const UserActivityEventHistoryMap& history);
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_USER_ACTIVITY_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_USER_ACTIVITY_FREQUENCY_CAP_H_  NOLINT

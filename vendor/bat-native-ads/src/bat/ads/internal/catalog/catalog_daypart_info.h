@@ -15,14 +15,11 @@ namespace ads {
 
 struct CatalogDaypartInfo {
   CatalogDaypartInfo();
-  CatalogDaypartInfo(
-      const CatalogDaypartInfo& info);
+  CatalogDaypartInfo(const CatalogDaypartInfo& info);
   ~CatalogDaypartInfo();
 
-  bool operator==(
-      const CatalogDaypartInfo& rhs) const;
-  bool operator!=(
-      const CatalogDaypartInfo& rhs) const;
+  bool operator==(const CatalogDaypartInfo& rhs) const;
+  bool operator!=(const CatalogDaypartInfo& rhs) const;
 
   std::string dow = "0123456";
   int start_minute = 0;

@@ -15,12 +15,10 @@ namespace ads {
 class ConversionsObserver : public base::CheckedObserver {
  public:
   // Invoked when an ad is transferred
-  virtual void OnConversion(
-     const std::string& creative_instance_id) {}
+  virtual void OnConversion(const std::string& creative_instance_id) {}
 
   // Invoked when an ad fails to transfer
-  virtual void OnConversionFailed(
-     const std::string& creative_instance_id) {}
+  virtual void OnConversionFailed(const std::string& creative_instance_id) {}
 
  protected:
   ~ConversionsObserver() override = default;

@@ -28,13 +28,12 @@ class SubdivisionTargetingFrequencyCap : public ExclusionRule<CreativeAdInfo> {
 
   ~SubdivisionTargetingFrequencyCap() override;
 
-  SubdivisionTargetingFrequencyCap(
-      const SubdivisionTargetingFrequencyCap&) = delete;
+  SubdivisionTargetingFrequencyCap(const SubdivisionTargetingFrequencyCap&) =
+      delete;
   SubdivisionTargetingFrequencyCap& operator=(
       const SubdivisionTargetingFrequencyCap&) = delete;
 
-  bool ShouldExclude(
-      const CreativeAdInfo& ad) override;
+  bool ShouldExclude(const CreativeAdInfo& ad) override;
 
   std::string get_last_message() const override;
 
@@ -44,10 +43,9 @@ class SubdivisionTargetingFrequencyCap : public ExclusionRule<CreativeAdInfo> {
 
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const CreativeAdInfo& ad);
+  bool DoesRespectCap(const CreativeAdInfo& ad);
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_SUBDIVISION_TARGETING_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_SUBDIVISION_TARGETING_FREQUENCY_CAP_H_  NOLINT

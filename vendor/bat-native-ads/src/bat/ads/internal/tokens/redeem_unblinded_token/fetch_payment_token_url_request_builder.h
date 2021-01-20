@@ -15,7 +15,7 @@ namespace ads {
 
 class FetchPaymentTokenUrlRequestBuilder : UrlRequestBuilder {
  public:
-  FetchPaymentTokenUrlRequestBuilder(
+  explicit FetchPaymentTokenUrlRequestBuilder(
       const ConfirmationInfo& confirmation);
 
   ~FetchPaymentTokenUrlRequestBuilder() override;
@@ -30,4 +30,4 @@ class FetchPaymentTokenUrlRequestBuilder : UrlRequestBuilder {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_TOKEN_FETCH_PAYMENT_TOKEN_URL_REQUEST_BUILDER_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_TOKEN_FETCH_PAYMENT_TOKEN_URL_REQUEST_BUILDER_H_  NOLINT

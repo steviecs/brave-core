@@ -19,8 +19,7 @@ class TokenGenerator : public TokenGeneratorInterface {
 
   ~TokenGenerator() override;
 
-  std::vector<Token> Generate(
-      const int count) const override;
+  std::vector<Token> Generate(const int count) const override;
 };
 
 }  // namespace privacy

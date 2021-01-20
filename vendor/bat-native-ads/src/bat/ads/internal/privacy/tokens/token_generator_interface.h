@@ -19,8 +19,7 @@ class TokenGeneratorInterface {
  public:
   virtual ~TokenGeneratorInterface() = default;
 
-  virtual std::vector<Token> Generate(
-      const int count) const = 0;
+  virtual std::vector<Token> Generate(const int count) const = 0;
 };
 
 }  // namespace privacy

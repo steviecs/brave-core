@@ -24,11 +24,15 @@
 
 namespace ads {
 
-using GetCreativeNewTabPageAdCallback = std::function<void(const Result,
-    const std::string& creative_instance_id, const CreativeNewTabPageAdInfo&)>;
+using GetCreativeNewTabPageAdCallback =
+    std::function<void(const Result,
+                       const std::string& creative_instance_id,
+                       const CreativeNewTabPageAdInfo&)>;
 
-using GetCreativeNewTabPageAdsCallback = std::function<void(const Result,
-    const std::vector<std::string>&, const CreativeNewTabPageAdList&)>;
+using GetCreativeNewTabPageAdsCallback =
+    std::function<void(const Result,
+                       const std::vector<std::string>&,
+                       const CreativeNewTabPageAdList&)>;
 
 namespace database {
 namespace table {
@@ -39,67 +43,52 @@ class CreativeNewTabPageAds : public Table {
 
   ~CreativeNewTabPageAds() override;
 
-  void Save(
-      const CreativeNewTabPageAdList& creative_new_tab_page_ads,
-      ResultCallback callback);
+  void Save(const CreativeNewTabPageAdList& creative_new_tab_page_ads,
+            ResultCallback callback);
 
-  void Delete(
-      ResultCallback callback);
+  void Delete(ResultCallback callback);
 
-  void GetForCreativeInstanceId(
-      const std::string& creative_instance_id,
-      GetCreativeNewTabPageAdCallback callback);
+  void GetForCreativeInstanceId(const std::string& creative_instance_id,
+                                GetCreativeNewTabPageAdCallback callback);
 
-  void GetForSegments(
-      const SegmentList& segments,
-      GetCreativeNewTabPageAdsCallback callback);
+  void GetForSegments(const SegmentList& segments,
+                      GetCreativeNewTabPageAdsCallback callback);
 
-  void GetAll(
-      GetCreativeNewTabPageAdsCallback callback);
+  void GetAll(GetCreativeNewTabPageAdsCallback callback);
 
-  void set_batch_size(
-      const int batch_size);
+  void set_batch_size(const int batch_size);
 
   std::string get_table_name() const override;
 
-  void Migrate(
-      DBTransaction* transaction,
-      const int to_version) override;
+  void Migrate(DBTransaction* transaction, const int to_version) override;
 
  private:
   void InsertOrUpdate(
       DBTransaction* transaction,
       const CreativeNewTabPageAdList& creative_new_tab_page_ads);
 
-  int BindParameters(
-      DBCommand* command,
-      const CreativeNewTabPageAdList& creative_new_tab_page_ads);
+  int BindParameters(DBCommand* command,
+                     const CreativeNewTabPageAdList& creative_new_tab_page_ads);
 
   std::string BuildInsertOrUpdateQuery(
       DBCommand* command,
       const CreativeNewTabPageAdList& creative_new_tab_page_ads);
 
-  void OnGetForCreativeInstanceId(
-      DBCommandResponsePtr response,
-      const std::string& creative_instance_id,
-      GetCreativeNewTabPageAdCallback callback);
+  void OnGetForCreativeInstanceId(DBCommandResponsePtr response,
+                                  const std::string& creative_instance_id,
+                                  GetCreativeNewTabPageAdCallback callback);
 
-  void OnGetForSegments(
-      DBCommandResponsePtr response,
-      const SegmentList& segments,
-      GetCreativeNewTabPageAdsCallback callback);
+  void OnGetForSegments(DBCommandResponsePtr response,
+                        const SegmentList& segments,
+                        GetCreativeNewTabPageAdsCallback callback);
 
-  void OnGetAll(
-      DBCommandResponsePtr response,
-      GetCreativeNewTabPageAdsCallback callback);
+  void OnGetAll(DBCommandResponsePtr response,
+                GetCreativeNewTabPageAdsCallback callback);
 
-  CreativeNewTabPageAdInfo GetFromRecord(
-      DBRecord* record) const;
+  CreativeNewTabPageAdInfo GetFromRecord(DBRecord* record) const;
 
-  void CreateTableV9(
-      DBTransaction* transaction);
-  void MigrateToV9(
-      DBTransaction* transaction);
+  void CreateTableV9(DBTransaction* transaction);
+  void MigrateToV9(DBTransaction* transaction);
 
   int batch_size_;
 

@@ -21,16 +21,13 @@ UnblindedTokenInfo CreateUnblindedToken(
 UnblindedTokenList CreateUnblindedTokens(
     const std::vector<std::string>& unblinded_tokens_base64);
 
-UnblindedTokenList GetUnblindedTokens(
-    const int count);
+UnblindedTokenList GetUnblindedTokens(const int count);
 
-UnblindedTokenList GetRandomUnblindedTokens(
-    const int count);
+UnblindedTokenList GetRandomUnblindedTokens(const int count);
 
-base::Value GetUnblindedTokensAsList(
-    const int count);
+base::Value GetUnblindedTokensAsList(const int count);
 
 }  // namespace privacy
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_PRIVACY_UNBLINDED_TOKENS_UNBLINDED_TOKENS_UNITTEST_UTIL_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_PRIVACY_UNBLINDED_TOKENS_UNBLINDED_TOKENS_UNITTEST_UTIL_H_  NOLINT

@@ -15,8 +15,7 @@ class ExclusionRule {
  public:
   virtual ~ExclusionRule() = default;
 
-  virtual bool ShouldExclude(
-      const T&) = 0;
+  virtual bool ShouldExclude(const T&) = 0;
 
   virtual std::string get_last_message() const = 0;
 };

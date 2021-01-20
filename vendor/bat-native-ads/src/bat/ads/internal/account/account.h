@@ -31,37 +31,28 @@ struct CatalogIssuersInfo;
 struct StatementInfo;
 struct WalletInfo;
 
-class Account
-    : public AdRewardsDelegate,
-      public ConfirmationsObserver,
-      public RedeemUnblindedPaymentTokensDelegate {
+class Account : public AdRewardsDelegate,
+                public ConfirmationsObserver,
+                public RedeemUnblindedPaymentTokensDelegate {
  public:
-  Account(
-      privacy::TokenGeneratorInterface* token_generator);
+  explicit Account(privacy::TokenGeneratorInterface* token_generator);
 
   ~Account() override;
 
-  void AddObserver(
-      AccountObserver* observer);
-  void RemoveObserver(
-      AccountObserver* observer);
+  void AddObserver(AccountObserver* observer);
+  void RemoveObserver(AccountObserver* observer);
 
-  bool SetWallet(
-      const std::string& id,
-      const std::string& seed);
+  bool SetWallet(const std::string& id, const std::string& seed);
 
   WalletInfo GetWallet() const;
 
-  void SetCatalogIssuers(
-      const CatalogIssuersInfo& catalog_issuers);
+  void SetCatalogIssuers(const CatalogIssuersInfo& catalog_issuers);
 
-  void Deposit(
-      const std::string& creative_instance_id,
-      const ConfirmationType& confirmation_type);
+  void Deposit(const std::string& creative_instance_id,
+               const ConfirmationType& confirmation_type);
 
-  StatementInfo GetStatement(
-      const int64_t from_timestamp,
-      const int64_t to_timestamp) const;
+  StatementInfo GetStatement(const int64_t from_timestamp,
+                             const int64_t to_timestamp) const;
 
   void Reconcile();
 
@@ -84,13 +75,10 @@ class Account
 
   void ProcessUnclearedTransactions();
 
-  void NotifyWalletChanged(
-      const WalletInfo& wallet);
-  void NotifyWalletRestored(
-      const WalletInfo& wallet);
+  void NotifyWalletChanged(const WalletInfo& wallet);
+  void NotifyWalletRestored(const WalletInfo& wallet);
   void NotifyWalletInvalid();
-  void NotifyCatalogIssuersChanged(
-      const CatalogIssuersInfo& catalog_issuers);
+  void NotifyCatalogIssuersChanged(const CatalogIssuersInfo& catalog_issuers);
   void NotifyAdRewardsChanged();
   void NotifyTransactionsChanged();
   void NotifyUnclearedTransactionsProcessed();
@@ -99,11 +87,9 @@ class Account
   void OnDidReconcileAdRewards() override;
 
   // ConfirmationsObserver implementation
-  void OnConfirmAd(
-      const double estimated_redemption_value,
-      const ConfirmationInfo& confirmation) override;
-  void OnConfirmAdFailed(
-      const ConfirmationInfo& confirmation) override;
+  void OnConfirmAd(const double estimated_redemption_value,
+                   const ConfirmationInfo& confirmation) override;
+  void OnConfirmAdFailed(const ConfirmationInfo& confirmation) override;
 
   // RedeemUnblindedPaymentTokensDelegate implementation
   void OnDidRedeemUnblindedPaymentTokens() override;

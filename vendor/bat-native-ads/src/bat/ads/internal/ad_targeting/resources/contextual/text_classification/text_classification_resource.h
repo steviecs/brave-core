@@ -27,11 +27,9 @@ class TextClassification : public Resource<usermodel::UserModel*> {
 
   bool IsInitialized() const override;
 
-  void LoadForLocale(
-      const std::string& locale);
+  void LoadForLocale(const std::string& locale);
 
-  void LoadForId(
-      const std::string& locale);
+  void LoadForId(const std::string& locale);
 
   usermodel::UserModel* get() const override;
 
@@ -43,4 +41,4 @@ class TextClassification : public Resource<usermodel::UserModel*> {
 }  // namespace ad_targeting
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_RESOURCES_CONTEXTUAL_TEXT_CLASSIFICATION_TEXT_CLASSIFICATION_RESOURCE_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_RESOURCES_CONTEXTUAL_TEXT_CLASSIFICATION_TEXT_CLASSIFICATION_RESOURCE_H_  NOLINT

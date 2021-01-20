@@ -18,19 +18,15 @@ struct ConfirmationInfo;
 
 namespace security {
 
-std::vector<uint8_t> GenerateSecretKeyFromSeed(
-    const std::string& seed_base64);
+std::vector<uint8_t> GenerateSecretKeyFromSeed(const std::string& seed_base64);
 
-std::string Sign(
-    const std::map<std::string, std::string>& headers,
-    const std::string& key_id,
-    const std::string& secret_key);
+std::string Sign(const std::map<std::string, std::string>& headers,
+                 const std::string& key_id,
+                 const std::string& secret_key);
 
-std::vector<uint8_t> Sha256Hash(
-    const std::string& value);
+std::vector<uint8_t> Sha256Hash(const std::string& value);
 
-bool Verify(
-    const ConfirmationInfo& confirmation);
+bool Verify(const ConfirmationInfo& confirmation);
 
 }  // namespace security
 }  // namespace ads

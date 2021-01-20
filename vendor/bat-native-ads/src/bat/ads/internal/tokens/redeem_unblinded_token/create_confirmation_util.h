@@ -14,15 +14,13 @@ struct ConfirmationInfo;
 
 namespace privacy {
 struct UnblindedTokenInfo;
-}  // privacy
+}  // namespace privacy
 
-std::string CreateConfirmationRequestDTO(
-    const ConfirmationInfo& confirmation);
+std::string CreateConfirmationRequestDTO(const ConfirmationInfo& confirmation);
 
-std::string CreateCredential(
-    const privacy::UnblindedTokenInfo& unblinded_token,
-    const std::string& payload);
+std::string CreateCredential(const privacy::UnblindedTokenInfo& unblinded_token,
+                             const std::string& payload);
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_TOKEN_CREATE_CONFIRMATION_UTIL_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_TOKEN_CREATE_CONFIRMATION_UTIL_H_  NOLINT

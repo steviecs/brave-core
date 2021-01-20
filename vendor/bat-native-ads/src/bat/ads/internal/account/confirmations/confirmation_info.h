@@ -11,25 +11,22 @@
 #include <string>
 #include <vector>
 
-#include "wrapper.hpp"
 #include "bat/ads/confirmation_type.h"
 #include "bat/ads/internal/privacy/unblinded_tokens/unblinded_token_info.h"
+#include "wrapper.hpp"
 
 namespace ads {
 
-using challenge_bypass_ristretto::Token;
 using challenge_bypass_ristretto::BlindedToken;
+using challenge_bypass_ristretto::Token;
 
 struct ConfirmationInfo {
   ConfirmationInfo();
-  ConfirmationInfo(
-      const ConfirmationInfo& info);
+  ConfirmationInfo(const ConfirmationInfo& info);
   ~ConfirmationInfo();
 
-  bool operator==(
-      const ConfirmationInfo& rhs) const;
-  bool operator!=(
-      const ConfirmationInfo& rhs) const;
+  bool operator==(const ConfirmationInfo& rhs) const;
+  bool operator!=(const ConfirmationInfo& rhs) const;
 
   bool IsValid() const;
 

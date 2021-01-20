@@ -20,11 +20,10 @@ class AdEventViewed : public AdEvent<NewTabPageAdInfo> {
 
   ~AdEventViewed() override;
 
-  void FireEvent(
-      const NewTabPageAdInfo& ad) override;
+  void FireEvent(const NewTabPageAdInfo& ad) override;
 };
 
 }  // namespace new_tab_page_ads
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_EVENTS_NEW_TAB_PAGE_ADS_NEW_TAB_PAGE_AD_EVENT_VIEWED_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_EVENTS_NEW_TAB_PAGE_ADS_NEW_TAB_PAGE_AD_EVENT_VIEWED_H_  NOLINT

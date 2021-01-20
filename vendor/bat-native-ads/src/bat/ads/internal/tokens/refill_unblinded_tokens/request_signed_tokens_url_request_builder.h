@@ -9,10 +9,10 @@
 #include <string>
 #include <vector>
 
-#include "wrapper.hpp"
 #include "bat/ads/internal/account/wallet/wallet_info.h"
 #include "bat/ads/internal/server/url_request_builder.h"
 #include "bat/ads/mojom.h"
+#include "wrapper.hpp"
 
 namespace ads {
 
@@ -20,9 +20,8 @@ using challenge_bypass_ristretto::BlindedToken;
 
 class RequestSignedTokensUrlRequestBuilder : UrlRequestBuilder {
  public:
-  RequestSignedTokensUrlRequestBuilder(
-      const WalletInfo& wallet,
-      const std::vector<BlindedToken>& tokens);
+  RequestSignedTokensUrlRequestBuilder(const WalletInfo& wallet,
+                                       const std::vector<BlindedToken>& tokens);
 
   ~RequestSignedTokensUrlRequestBuilder() override;
 
@@ -34,12 +33,9 @@ class RequestSignedTokensUrlRequestBuilder : UrlRequestBuilder {
 
   std::string BuildUrl() const;
 
-  std::vector<std::string> BuildHeaders(
-      const std::string& body) const;
-  std::string BuildDigestHeaderValue(
-      const std::string& body) const;
-  std::string BuildSignatureHeaderValue(
-      const std::string& body) const;
+  std::vector<std::string> BuildHeaders(const std::string& body) const;
+  std::string BuildDigestHeaderValue(const std::string& body) const;
+  std::string BuildSignatureHeaderValue(const std::string& body) const;
   std::string BuildViaHeader() const;
 
   std::string BuildBody() const;
@@ -47,4 +43,4 @@ class RequestSignedTokensUrlRequestBuilder : UrlRequestBuilder {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_TOKENS_REFILL_UNBLINDED_TOKENS_REQUEST_SIGNED_TOKENS_URL_REQUEST_BUILDER_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_TOKENS_REFILL_UNBLINDED_TOKENS_REQUEST_SIGNED_TOKENS_URL_REQUEST_BUILDER_H_  NOLINT

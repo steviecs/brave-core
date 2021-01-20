@@ -6,8 +6,8 @@
 #ifndef BAT_ADS_INTERNAL_AD_REWARDS_AD_REWARDS_DELEGATE_MOCK_H_
 #define BAT_ADS_INTERNAL_AD_REWARDS_AD_REWARDS_DELEGATE_MOCK_H_
 
-#include "testing/gmock/include/gmock/gmock.h"
 #include "bat/ads/internal/account/ad_rewards/ad_rewards_delegate.h"
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace ads {
 

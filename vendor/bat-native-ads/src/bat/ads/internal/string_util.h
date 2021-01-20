@@ -13,11 +13,9 @@
 
 namespace ads {
 
-std::string StripNonAlphaCharacters(
-    const std::string& value);
+std::string StripNonAlphaCharacters(const std::string& value);
 
-std::string StripNonAlphaNumericCharacters(
-    const std::string& value);
+std::string StripNonAlphaNumericCharacters(const std::string& value);
 
 }  // namespace ads
 

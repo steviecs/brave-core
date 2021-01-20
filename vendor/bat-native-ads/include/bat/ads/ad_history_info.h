@@ -19,18 +19,14 @@ namespace ads {
 
 struct ADS_EXPORT AdHistoryInfo {
   AdHistoryInfo();
-  AdHistoryInfo(
-      const AdHistoryInfo& info);
+  AdHistoryInfo(const AdHistoryInfo& info);
   ~AdHistoryInfo();
 
-  bool operator==(
-      const AdHistoryInfo& rhs) const;
-  bool operator!=(
-      const AdHistoryInfo& rhs) const;
+  bool operator==(const AdHistoryInfo& rhs) const;
+  bool operator!=(const AdHistoryInfo& rhs) const;
 
   std::string ToJson() const;
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
   uint64_t timestamp_in_seconds = 0;
   AdContentInfo ad_content;

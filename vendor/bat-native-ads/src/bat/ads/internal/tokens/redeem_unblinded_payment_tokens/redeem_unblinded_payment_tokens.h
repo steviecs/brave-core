@@ -21,11 +21,9 @@ class RedeemUnblindedPaymentTokens {
 
   ~RedeemUnblindedPaymentTokens();
 
-  void set_delegate(
-      RedeemUnblindedPaymentTokensDelegate* delegate);
+  void set_delegate(RedeemUnblindedPaymentTokensDelegate* delegate);
 
-  void MaybeRedeemAfterDelay(
-      const WalletInfo& wallet);
+  void MaybeRedeemAfterDelay(const WalletInfo& wallet);
 
  private:
   WalletInfo wallet_;
@@ -33,8 +31,7 @@ class RedeemUnblindedPaymentTokens {
   Timer timer_;
 
   void Redeem();
-  void OnRedeem(
-      const UrlResponse& url_response);
+  void OnRedeem(const UrlResponse& url_response);
 
   void OnDidRedeemUnblindedPaymentTokens();
 

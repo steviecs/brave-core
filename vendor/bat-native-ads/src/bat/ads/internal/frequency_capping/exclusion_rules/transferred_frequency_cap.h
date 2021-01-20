@@ -17,16 +17,14 @@ struct CreativeAdInfo;
 
 class TransferredFrequencyCap : public ExclusionRule<CreativeAdInfo> {
  public:
-  TransferredFrequencyCap(
-      const AdEventList& ad_events);
+  explicit TransferredFrequencyCap(const AdEventList& ad_events);
 
   ~TransferredFrequencyCap() override;
 
   TransferredFrequencyCap(const TransferredFrequencyCap&) = delete;
   TransferredFrequencyCap& operator=(const TransferredFrequencyCap&) = delete;
 
-  bool ShouldExclude(
-      const CreativeAdInfo& ad) override;
+  bool ShouldExclude(const CreativeAdInfo& ad) override;
 
   std::string get_last_message() const override;
 
@@ -35,14 +33,12 @@ class TransferredFrequencyCap : public ExclusionRule<CreativeAdInfo> {
 
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const AdEventList& ad_events);
+  bool DoesRespectCap(const AdEventList& ad_events);
 
-  AdEventList FilterAdEvents(
-      const AdEventList& ad_events,
-      const CreativeAdInfo& ad) const;
+  AdEventList FilterAdEvents(const AdEventList& ad_events,
+                             const CreativeAdInfo& ad) const;
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_TRANSFERRED_CAP_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_TRANSFERRED_CAP_FREQUENCY_CAP_H_  NOLINT

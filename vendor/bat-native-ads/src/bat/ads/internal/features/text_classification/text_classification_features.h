@@ -20,4 +20,4 @@ int GetTextClassificationProbabilitiesHistorySize();
 }  // namespace features
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FEATURES_TEXT_CLASSIFICATION_TEXT_CLASSIFICATION_FEATURES_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FEATURES_TEXT_CLASSIFICATION_TEXT_CLASSIFICATION_FEATURES_H_  NOLINT

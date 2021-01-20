@@ -7,8 +7,8 @@
 #define BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_DELEGATE_MOCK_H_  // NOLINT
 
 #include "base/time/time.h"
-#include "testing/gmock/include/gmock/gmock.h"
 #include "bat/ads/internal/tokens/redeem_unblinded_payment_tokens/redeem_unblinded_payment_tokens_delegate.h"
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace ads {
 
@@ -27,8 +27,9 @@ class RedeemUnblindedPaymentTokensDelegateMock
   MOCK_METHOD(void, OnDidRedeemUnblindedPaymentTokens, ());
   MOCK_METHOD(void, OnFailedToRedeemUnblindedPaymentTokens, ());
 
-  MOCK_METHOD(void, OnDidScheduleNextUnblindedPaymentTokensRedemption, (
-      const base::Time& time));
+  MOCK_METHOD(void,
+              OnDidScheduleNextUnblindedPaymentTokensRedemption,
+              (const base::Time& time));
 
   MOCK_METHOD(void, OnWillRetryRedeemingUnblindedPaymentTokens, ());
   MOCK_METHOD(void, OnDidRetryRedeemingUnblindedPaymentTokens, ());
@@ -36,4 +37,4 @@ class RedeemUnblindedPaymentTokensDelegateMock
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_DELEGATE_MOCK_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_REDEEM_UNBLINDED_PAYMENT_TOKENS_DELEGATE_MOCK_H_  NOLINT

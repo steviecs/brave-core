@@ -15,13 +15,11 @@ namespace ads {
 
 struct FilteredCategory {
   FilteredCategory();
-  FilteredCategory(
-      const FilteredCategory& category);
+  FilteredCategory(const FilteredCategory& category);
   ~FilteredCategory();
 
   std::string ToJson() const;
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
   std::string name;
 };

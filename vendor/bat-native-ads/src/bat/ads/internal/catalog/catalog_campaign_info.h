@@ -17,14 +17,11 @@ namespace ads {
 
 struct CatalogCampaignInfo {
   CatalogCampaignInfo();
-  CatalogCampaignInfo(
-      const CatalogCampaignInfo& info);
+  CatalogCampaignInfo(const CatalogCampaignInfo& info);
   ~CatalogCampaignInfo();
 
-  bool operator==(
-      const CatalogCampaignInfo& rhs) const;
-  bool operator!=(
-      const CatalogCampaignInfo& rhs) const;
+  bool operator==(const CatalogCampaignInfo& rhs) const;
+  bool operator!=(const CatalogCampaignInfo& rhs) const;
 
   std::string campaign_id;
   unsigned int priority = 0;

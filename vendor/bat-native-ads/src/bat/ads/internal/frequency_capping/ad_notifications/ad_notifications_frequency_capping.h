@@ -28,15 +28,12 @@ class FrequencyCapping {
 
   ~FrequencyCapping();
 
-  FrequencyCapping(
-      const FrequencyCapping&) = delete;
-  FrequencyCapping& operator=(
-      const FrequencyCapping&) = delete;
+  FrequencyCapping(const FrequencyCapping&) = delete;
+  FrequencyCapping& operator=(const FrequencyCapping&) = delete;
 
   bool IsAdAllowed();
 
-  bool ShouldExcludeAd(
-      const CreativeAdInfo& ad);
+  bool ShouldExcludeAd(const CreativeAdInfo& ad);
 
  private:
   ad_targeting::geographic::SubdivisionTargeting* subdivision_targeting_;
@@ -47,4 +44,4 @@ class FrequencyCapping {
 }  // namespace ad_notifications
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_AD_NOTIFICATIONS_AD_NOTIFICATIONS_FREQUENCY_CAPPING_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_AD_NOTIFICATIONS_AD_NOTIFICATIONS_FREQUENCY_CAPPING_H_  NOLINT

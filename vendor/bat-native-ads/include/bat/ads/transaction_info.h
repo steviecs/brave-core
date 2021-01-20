@@ -18,24 +18,19 @@ namespace ads {
 
 struct ADS_EXPORT TransactionInfo {
   TransactionInfo();
-  TransactionInfo(
-        const TransactionInfo& info);
+  TransactionInfo(const TransactionInfo& info);
   ~TransactionInfo();
 
-  bool operator==(
-    const TransactionInfo& rhs) const;
-  bool operator!=(
-      const TransactionInfo& rhs) const;
+  bool operator==(const TransactionInfo& rhs) const;
+  bool operator!=(const TransactionInfo& rhs) const;
 
   int64_t timestamp = 0;
   double estimated_redemption_value = 0.0;
   std::string confirmation_type;
 
-  void ToDictionary(
-      base::Value* dictionary) const;
+  void ToDictionary(base::Value* dictionary) const;
 
-  void FromDictionary(
-      base::DictionaryValue* dictionary);
+  void FromDictionary(base::DictionaryValue* dictionary);
 };
 
 using TransactionList = std::vector<TransactionInfo>;

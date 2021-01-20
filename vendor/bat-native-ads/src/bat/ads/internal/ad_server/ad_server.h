@@ -21,10 +21,8 @@ class AdServer {
 
   ~AdServer();
 
-  void AddObserver(
-      AdServerObserver* observer);
-  void RemoveObserver(
-      AdServerObserver* observer);
+  void AddObserver(AdServerObserver* observer);
+  void RemoveObserver(AdServerObserver* observer);
 
   void MaybeFetch();
 
@@ -36,11 +34,9 @@ class AdServer {
   Timer timer_;
 
   void Fetch();
-  void OnFetch(
-      const UrlResponse& url_response);
+  void OnFetch(const UrlResponse& url_response);
 
-  void SaveCatalog(
-      const Catalog& catalog);
+  void SaveCatalog(const Catalog& catalog);
 
   BackoffTimer retry_timer_;
   void Retry();
@@ -48,8 +44,7 @@ class AdServer {
 
   void FetchAfterDelay();
 
-  void NotifyCatalogUpdated(
-      const Catalog& catalog);
+  void NotifyCatalogUpdated(const Catalog& catalog);
   void NotifyCatalogFailed();
 };
 

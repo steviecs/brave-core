@@ -13,11 +13,9 @@ namespace ads {
 
 using SegmentList = std::vector<std::string>;
 
-SegmentList DeserializeSegments(
-    const std::string& json);
+SegmentList DeserializeSegments(const std::string& json);
 
-std::string SerializeSegments(
-    const SegmentList& segments);
+std::string SerializeSegments(const SegmentList& segments);
 
 }  // namespace ads
 

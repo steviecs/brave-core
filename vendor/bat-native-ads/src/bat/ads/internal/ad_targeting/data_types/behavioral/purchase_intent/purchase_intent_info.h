@@ -19,8 +19,7 @@ namespace ads {
 struct PurchaseIntentInfo {
  public:
   PurchaseIntentInfo();
-  PurchaseIntentInfo(
-      const PurchaseIntentInfo& info);
+  PurchaseIntentInfo(const PurchaseIntentInfo& info);
   ~PurchaseIntentInfo();
 
   uint16_t version = 0;
@@ -31,4 +30,4 @@ struct PurchaseIntentInfo {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_INFO_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_INFO_H_  NOLINT

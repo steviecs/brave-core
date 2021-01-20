@@ -20,18 +20,15 @@ class AdDelivery {
 
   ~AdDelivery();
 
-  bool MaybeDeliverAd(
-      const AdNotificationInfo& ad);
+  bool MaybeDeliverAd(const AdNotificationInfo& ad);
 
  private:
-  void ShowNotification(
-      const AdNotificationInfo& ad);
+  void ShowNotification(const AdNotificationInfo& ad);
 
-  void RecordAdImpressionForSegment(
-      const std::string& segment);
+  void RecordAdImpressionForSegment(const std::string& segment);
 };
 
 }  // namespace ad_notifications
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_DELIVERY_AD_NOTIFICATIONS_AD_NOTIFICATION_DELIVERY_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_DELIVERY_AD_NOTIFICATIONS_AD_NOTIFICATION_DELIVERY_H_  NOLINT

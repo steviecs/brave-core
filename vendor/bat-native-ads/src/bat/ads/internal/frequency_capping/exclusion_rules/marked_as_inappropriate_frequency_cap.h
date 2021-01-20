@@ -20,23 +20,21 @@ class MarkedAsInappropriateFrequencyCap : public ExclusionRule<CreativeAdInfo> {
 
   ~MarkedAsInappropriateFrequencyCap() override;
 
-  MarkedAsInappropriateFrequencyCap(
-      const MarkedAsInappropriateFrequencyCap&) = delete;
+  MarkedAsInappropriateFrequencyCap(const MarkedAsInappropriateFrequencyCap&) =
+      delete;
   MarkedAsInappropriateFrequencyCap& operator=(
       const MarkedAsInappropriateFrequencyCap&) = delete;
 
-  bool ShouldExclude(
-      const CreativeAdInfo& ad) override;
+  bool ShouldExclude(const CreativeAdInfo& ad) override;
 
   std::string get_last_message() const override;
 
  private:
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const CreativeAdInfo& ad);
+  bool DoesRespectCap(const CreativeAdInfo& ad);
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_MARKED_AS_INAPPROPRIATE_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_MARKED_AS_INAPPROPRIATE_FREQUENCY_CAP_H_  NOLINT

@@ -15,20 +15,13 @@ namespace ads {
 
 struct ConversionInfo {
   ConversionInfo();
-  ConversionInfo(
-      const ConversionInfo& info);
+  ConversionInfo(const ConversionInfo& info);
   ~ConversionInfo();
 
-  bool operator==(
-      const ConversionInfo& rhs) const;
-  bool operator!=(
-      const ConversionInfo& rhs) const;
+  bool operator==(const ConversionInfo& rhs) const;
+  bool operator!=(const ConversionInfo& rhs) const;
 
-  enum class SortType {
-    kNone = 0,
-    kAscendingOrder,
-    kDescendingOrder
-  };
+  enum class SortType { kNone = 0, kAscendingOrder, kDescendingOrder };
 
   std::string creative_set_id;
   std::string type;

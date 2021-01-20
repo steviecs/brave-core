@@ -14,14 +14,11 @@ namespace ads {
 
 struct CatalogTypeInfo {
   CatalogTypeInfo();
-  CatalogTypeInfo(
-      const CatalogTypeInfo& info);
+  CatalogTypeInfo(const CatalogTypeInfo& info);
   ~CatalogTypeInfo();
 
-  bool operator==(
-      const CatalogTypeInfo& rhs) const;
-  bool operator!=(
-      const CatalogTypeInfo& rhs) const;
+  bool operator==(const CatalogTypeInfo& rhs) const;
+  bool operator!=(const CatalogTypeInfo& rhs) const;
 
   std::string code;
   std::string name;

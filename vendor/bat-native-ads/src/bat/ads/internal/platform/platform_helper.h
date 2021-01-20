@@ -12,14 +12,7 @@
 
 namespace ads {
 
-enum class PlatformType {
-  kUnknown,
-  kAndroid,
-  kIOS,
-  kLinux,
-  kMacOS,
-  kWindows
-};
+enum class PlatformType { kUnknown, kAndroid, kIOS, kLinux, kMacOS, kWindows };
 
 class PlatformHelper {
  public:
@@ -28,8 +21,7 @@ class PlatformHelper {
 
   static PlatformHelper* GetInstance();
 
-  void set_for_testing(
-      PlatformHelper* platform_helper);
+  void set_for_testing(PlatformHelper* platform_helper);
 
   virtual bool IsMobile() const;
   virtual std::string GetPlatformName() const;

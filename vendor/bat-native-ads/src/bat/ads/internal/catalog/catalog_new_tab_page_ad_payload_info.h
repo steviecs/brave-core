@@ -12,14 +12,11 @@ namespace ads {
 
 struct CatalogNewTabPageAdPayloadInfo {
   CatalogNewTabPageAdPayloadInfo();
-  CatalogNewTabPageAdPayloadInfo(
-      const CatalogNewTabPageAdPayloadInfo& info);
+  CatalogNewTabPageAdPayloadInfo(const CatalogNewTabPageAdPayloadInfo& info);
   ~CatalogNewTabPageAdPayloadInfo();
 
-  bool operator==(
-      const CatalogNewTabPageAdPayloadInfo& rhs) const;
-  bool operator!=(
-      const CatalogNewTabPageAdPayloadInfo& rhs) const;
+  bool operator==(const CatalogNewTabPageAdPayloadInfo& rhs) const;
+  bool operator!=(const CatalogNewTabPageAdPayloadInfo& rhs) const;
 
   std::string company_name;
   std::string alt;

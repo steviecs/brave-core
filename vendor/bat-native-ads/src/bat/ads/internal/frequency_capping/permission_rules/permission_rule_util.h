@@ -10,9 +10,8 @@
 
 namespace ads {
 
-bool ShouldAllow(
-    PermissionRule* permission_rule);
+bool ShouldAllow(PermissionRule* permission_rule);
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_PERMISSION_RULE_UTIL_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_PERMISSION_RULE_UTIL_H_  NOLINT

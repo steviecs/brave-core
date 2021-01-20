@@ -6,8 +6,8 @@
 #ifndef BAT_ADS_MOJOM_H_
 #define BAT_ADS_MOJOM_H_
 
-#include "bat/ads/public/interfaces/ads_database.mojom.h"
 #include "bat/ads/public/interfaces/ads.mojom.h"
+#include "bat/ads/public/interfaces/ads_database.mojom.h"
 
 namespace ads {
 

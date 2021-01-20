@@ -21,15 +21,12 @@ class Initialize {
 
   ~Initialize();
 
-  void CreateOrOpen(
-      ResultCallback callback);
+  void CreateOrOpen(ResultCallback callback);
 
   std::string get_last_message() const;
 
  private:
-  void OnCreateOrOpen(
-      DBCommandResponsePtr response,
-      ResultCallback callback);
+  void OnCreateOrOpen(DBCommandResponsePtr response, ResultCallback callback);
 
   std::string last_message_;
 };

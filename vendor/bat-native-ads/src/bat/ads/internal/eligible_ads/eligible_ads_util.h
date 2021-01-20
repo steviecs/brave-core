@@ -15,32 +15,32 @@
 
 namespace ads {
 
-template<typename T>
+template <typename T>
 T FilterSeenAdvertisers(
     const T& ads,
     const std::map<std::string, uint64_t>& seen_advertisers) {
   T unseen_advertisers = ads;
 
-  const auto iter = std::remove_if(unseen_advertisers.begin(),
-      unseen_advertisers.end(), [&seen_advertisers](CreativeAdInfo& ad) {
-    return seen_advertisers.find(ad.advertiser_id) != seen_advertisers.end();
-  });
+  const auto iter =
+      std::remove_if(unseen_advertisers.begin(), unseen_advertisers.end(),
+                     [&seen_advertisers](CreativeAdInfo& ad) {
+                       return seen_advertisers.find(ad.advertiser_id) !=
+                              seen_advertisers.end();
+                     });
 
   unseen_advertisers.erase(iter, unseen_advertisers.end());
 
   return unseen_advertisers;
 }
 
-template<typename T>
-T FilterSeenAds(
-    const T& ads,
-    const std::map<std::string, uint64_t>& seen_ads) {
+template <typename T>
+T FilterSeenAds(const T& ads, const std::map<std::string, uint64_t>& seen_ads) {
   T unseen_ads = ads;
 
-  const auto iter = std::remove_if(unseen_ads.begin(), unseen_ads.end(),
-      [&seen_ads](CreativeAdInfo& ad) {
-    return seen_ads.find(ad.creative_instance_id) != seen_ads.end();
-  });
+  const auto iter = std::remove_if(
+      unseen_ads.begin(), unseen_ads.end(), [&seen_ads](CreativeAdInfo& ad) {
+        return seen_ads.find(ad.creative_instance_id) != seen_ads.end();
+      });
 
   unseen_ads.erase(iter, unseen_ads.end());
 

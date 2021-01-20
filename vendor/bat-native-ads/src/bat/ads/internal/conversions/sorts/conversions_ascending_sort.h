@@ -11,12 +11,11 @@
 namespace ads {
 
 class ConversionsAscendingSort : public ConversionsSort {
- public :
+ public:
   ConversionsAscendingSort();
   ~ConversionsAscendingSort() override;
 
-  ConversionList Apply(
-      const ConversionList& list) const override;
+  ConversionList Apply(const ConversionList& list) const override;
 };
 
 }  // namespace ads

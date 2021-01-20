@@ -12,17 +12,13 @@
 
 namespace ads {
 
-std::string UrlRequestToString(
-    const UrlRequestPtr& url_request);
+std::string UrlRequestToString(const UrlRequestPtr& url_request);
 
-std::string UrlRequestHeadersToString(
-    const UrlRequestPtr& url_request);
+std::string UrlRequestHeadersToString(const UrlRequestPtr& url_request);
 
-std::string UrlResponseToString(
-    const UrlResponse& url_response);
+std::string UrlResponseToString(const UrlResponse& url_response);
 
-std::string UrlResponseHeadersToString(
-    const UrlResponse& url_response);
+std::string UrlResponseHeadersToString(const UrlResponse& url_response);
 
 }  // namespace ads
 

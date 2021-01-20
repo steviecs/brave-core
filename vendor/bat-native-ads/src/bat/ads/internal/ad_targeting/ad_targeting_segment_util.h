@@ -13,17 +13,13 @@
 
 namespace ads {
 
-std::vector<std::string> SplitSegment(
-    const std::string& segment);
+std::vector<std::string> SplitSegment(const std::string& segment);
 
-std::string GetParentSegment(
-    const std::string& segment);
+std::string GetParentSegment(const std::string& segment);
 
-SegmentList GetParentSegments(
-    const SegmentList& segments);
+SegmentList GetParentSegments(const SegmentList& segments);
 
-bool ShouldFilterSegment(
-    const std::string& segment);
+bool ShouldFilterSegment(const std::string& segment);
 
 }  // namespace ads
 

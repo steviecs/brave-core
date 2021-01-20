@@ -15,61 +15,32 @@
 namespace ads {
 namespace database {
 
-std::string BuildBindingParameterPlaceholder(
-    const size_t parameters_count);
+std::string BuildBindingParameterPlaceholder(const size_t parameters_count);
 
-std::string BuildBindingParameterPlaceholders(
-    const size_t parameters_count,
-    const size_t values_count);
+std::string BuildBindingParameterPlaceholders(const size_t parameters_count,
+                                              const size_t values_count);
 
-void BindNull(
-    DBCommand* command,
-    const int index);
+void BindNull(DBCommand* command, const int index);
 
-void BindInt(
-    DBCommand* command,
-    const int index,
-    const int32_t value);
+void BindInt(DBCommand* command, const int index, const int32_t value);
 
-void BindInt64(
-    DBCommand* command,
-    const int index,
-    const int64_t value);
+void BindInt64(DBCommand* command, const int index, const int64_t value);
 
-void BindDouble(
-    DBCommand* command,
-    const int index,
-    const double value);
+void BindDouble(DBCommand* command, const int index, const double value);
 
-void BindBool(
-    DBCommand* command,
-    const int index,
-    const bool value);
+void BindBool(DBCommand* command, const int index, const bool value);
 
-void BindString(
-    DBCommand* command,
-    const int index,
-    const std::string& value);
+void BindString(DBCommand* command, const int index, const std::string& value);
 
-int ColumnInt(
-    DBRecord* record,
-    const size_t index);
+int ColumnInt(DBRecord* record, const size_t index);
 
-int64_t ColumnInt64(
-    DBRecord* record,
-    const size_t index);
+int64_t ColumnInt64(DBRecord* record, const size_t index);
 
-double ColumnDouble(
-    DBRecord* record,
-    const size_t index);
+double ColumnDouble(DBRecord* record, const size_t index);
 
-bool ColumnBool(
-    DBRecord* record,
-    const size_t index);
+bool ColumnBool(DBRecord* record, const size_t index);
 
-std::string ColumnString(
-    DBRecord* record,
-    const size_t index);
+std::string ColumnString(DBRecord* record, const size_t index);
 
 }  // namespace database
 }  // namespace ads

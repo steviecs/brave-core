@@ -17,11 +17,9 @@ struct CreativeNewTabPageAdInfo : CreativeAdInfo {
   CreativeNewTabPageAdInfo();
   ~CreativeNewTabPageAdInfo();
 
-  bool operator==(
-      const CreativeNewTabPageAdInfo& rhs) const;
+  bool operator==(const CreativeNewTabPageAdInfo& rhs) const;
 
-  bool operator!=(
-      const CreativeNewTabPageAdInfo& rhs) const;
+  bool operator!=(const CreativeNewTabPageAdInfo& rhs) const;
 
   std::string company_name;
   std::string alt;

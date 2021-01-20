@@ -14,8 +14,7 @@ class ConversionsSort {
  public:
   virtual ~ConversionsSort() = default;
 
-  virtual ConversionList Apply(
-      const ConversionList& conversions) const = 0;
+  virtual ConversionList Apply(const ConversionList& conversions) const = 0;
 };
 
 }  // namespace ads

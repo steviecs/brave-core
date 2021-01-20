@@ -15,24 +15,16 @@ namespace ads {
 
 struct ADS_EXPORT CategoryContentInfo {
   CategoryContentInfo();
-  CategoryContentInfo(
-      const CategoryContentInfo& info);
+  CategoryContentInfo(const CategoryContentInfo& info);
   ~CategoryContentInfo();
 
-  bool operator==(
-      const CategoryContentInfo& rhs) const;
-  bool operator!=(
-      const CategoryContentInfo& rhs) const;
+  bool operator==(const CategoryContentInfo& rhs) const;
+  bool operator!=(const CategoryContentInfo& rhs) const;
 
-  enum class OptAction {
-    kNone = 0,
-    kOptIn,
-    kOptOut
-  };
+  enum class OptAction { kNone = 0, kOptIn, kOptOut };
 
   std::string ToJson() const;
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
   std::string category;
   OptAction opt_action = OptAction::kNone;

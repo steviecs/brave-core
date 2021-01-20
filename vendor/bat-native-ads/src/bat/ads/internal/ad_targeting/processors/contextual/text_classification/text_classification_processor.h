@@ -21,13 +21,11 @@ namespace processor {
 
 class TextClassification : public Processor<std::string> {
  public:
-  TextClassification(
-      resource::TextClassification* resource);
+  explicit TextClassification(resource::TextClassification* resource);
 
   ~TextClassification() override;
 
-  void Process(
-      const std::string& text) override;
+  void Process(const std::string& text) override;
 
  private:
   resource::TextClassification* resource_;
@@ -37,4 +35,4 @@ class TextClassification : public Processor<std::string> {
 }  // namespace ad_targeting
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_PROCESSORS_CONTEXTUAL_TEXT_CLASSIFICATION_TEXT_CLASSIFICATION_PROCESSOR_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_PROCESSORS_CONTEXTUAL_TEXT_CLASSIFICATION_TEXT_CLASSIFICATION_PROCESSOR_H_  NOLINT

@@ -16,12 +16,10 @@ struct WalletInfo;
 class AccountObserver : public base::CheckedObserver {
  public:
   // Invoked when the wallet has changed
-  virtual void OnWalletChanged(
-      const WalletInfo& wallet) {}
+  virtual void OnWalletChanged(const WalletInfo& wallet) {}
 
   // Invoked when a wallet is restored
-  virtual void OnWalletRestored(
-      const WalletInfo& wallet) {}
+  virtual void OnWalletRestored(const WalletInfo& wallet) {}
 
   // Invoked if the wallet is invalid
   virtual void OnWalletInvalid() {}

@@ -15,8 +15,7 @@ namespace ads {
 
 struct ADS_EXPORT AdInfo {
   AdInfo();
-  AdInfo(
-      const AdInfo& info);
+  AdInfo(const AdInfo& info);
   ~AdInfo();
 
   bool IsValid() const;

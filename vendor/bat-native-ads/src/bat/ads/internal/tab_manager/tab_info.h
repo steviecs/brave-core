@@ -14,14 +14,11 @@ namespace ads {
 
 struct TabInfo {
   TabInfo();
-  TabInfo(
-      const TabInfo& info);
+  TabInfo(const TabInfo& info);
   ~TabInfo();
 
-  bool operator==(
-      const TabInfo& rhs) const;
-  bool operator!=(
-      const TabInfo& rhs) const;
+  bool operator==(const TabInfo& rhs) const;
+  bool operator!=(const TabInfo& rhs) const;
 
   int32_t id = 0;
   std::string url;

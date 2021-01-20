@@ -18,13 +18,10 @@ namespace ads {
 
 struct CatalogState {
   CatalogState();
-  CatalogState(
-      const CatalogState& state);
+  CatalogState(const CatalogState& state);
   ~CatalogState();
 
-  Result FromJson(
-      const std::string& json,
-      const std::string& json_schema);
+  Result FromJson(const std::string& json, const std::string& json_schema);
 
   std::string catalog_id;
   int version = 0;

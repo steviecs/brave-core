@@ -13,8 +13,7 @@ class AdEvent {
  public:
   virtual ~AdEvent() = default;
 
-  virtual void FireEvent(
-      const T&) = 0;
+  virtual void FireEvent(const T&) = 0;
 };
 
 }  // namespace ads

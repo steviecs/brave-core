@@ -16,15 +16,13 @@ namespace ads {
 
 struct ADS_EXPORT PromotedContentAdInfo : AdInfo {
   PromotedContentAdInfo();
-  PromotedContentAdInfo(
-      const PromotedContentAdInfo& info);
+  PromotedContentAdInfo(const PromotedContentAdInfo& info);
   ~PromotedContentAdInfo();
 
   bool IsValid() const;
 
   std::string ToJson() const;
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
   std::string title;
   std::string description;

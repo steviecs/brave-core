@@ -15,8 +15,7 @@ namespace ads {
 struct PurchaseIntentSignalInfo {
  public:
   PurchaseIntentSignalInfo();
-  PurchaseIntentSignalInfo(
-      const PurchaseIntentSignalInfo& info);
+  PurchaseIntentSignalInfo(const PurchaseIntentSignalInfo& info);
   ~PurchaseIntentSignalInfo();
 
   uint64_t timestamp_in_seconds = 0;
@@ -26,4 +25,4 @@ struct PurchaseIntentSignalInfo {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_SIGNAL_INFO_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_SIGNAL_INFO_H_  NOLINT

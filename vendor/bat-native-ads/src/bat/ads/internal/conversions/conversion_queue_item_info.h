@@ -15,8 +15,7 @@ namespace ads {
 
 struct ConversionQueueItemInfo {
   ConversionQueueItemInfo();
-  ConversionQueueItemInfo(
-      const ConversionQueueItemInfo& info);
+  ConversionQueueItemInfo(const ConversionQueueItemInfo& info);
   ~ConversionQueueItemInfo();
 
   uint64_t timestamp_in_seconds = 0;

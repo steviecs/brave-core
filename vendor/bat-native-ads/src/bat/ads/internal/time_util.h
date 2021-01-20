@@ -12,11 +12,9 @@
 
 namespace ads {
 
-std::string GetLocalWeekDay(
-    const base::Time& time);
+std::string GetLocalWeekDay(const base::Time& time);
 
-int ConvertHoursAndMinutesToMinutes(
-    const base::Time& time);
+int ConvertHoursAndMinutesToMinutes(const base::Time& time);
 
 }  // namespace ads
 

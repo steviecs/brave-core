@@ -47,58 +47,47 @@ class AdServing {
   // TODO(https://github.com/brave/brave-browser/issues/12315): Update
   // BatAdsAdNotificationPacingTest to test the contract, not the implementation
   FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest,
-      PacingDisableDelivery);
+                           PacingDisableDelivery);
+  FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest, NoPacing);
+  FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest, SimplePacing);
+  FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest, NoPacingPrioritized);
   FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest,
-      NoPacing);
+                           PacingDisableDeliveryPrioritized);
   FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest,
-      SimplePacing);
-  FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest,
-      NoPacingPrioritized);
-  FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest,
-      PacingDisableDeliveryPrioritized);
-  FRIEND_TEST_ALL_PREFIXES(BatAdsAdNotificationPacingTest,
-      PacingAndPrioritization);
+                           PacingAndPrioritization);
 
   bool NextIntervalHasElapsed();
 
-  base::Time MaybeServeAfter(
-      const base::TimeDelta delay);
+  base::Time MaybeServeAfter(const base::TimeDelta delay);
 
-  void MaybeServeAdForSegments(
-      const SegmentList& segments,
-      MaybeServeAdForSegmentsCallback callback);
+  void MaybeServeAdForSegments(const SegmentList& segments,
+                               MaybeServeAdForSegmentsCallback callback);
 
   void MaybeServeAdForParentChildSegments(
       const SegmentList& segments,
       const AdEventList& ad_events,
       MaybeServeAdForSegmentsCallback callback);
 
-  void MaybeServeAdForParentSegments(
-      const SegmentList& segments,
-      const AdEventList& ad_events,
-      MaybeServeAdForSegmentsCallback callback);
+  void MaybeServeAdForParentSegments(const SegmentList& segments,
+                                     const AdEventList& ad_events,
+                                     MaybeServeAdForSegmentsCallback callback);
 
-  void MaybeServeAdForUntargeted(
-      const AdEventList& ad_events,
-      MaybeServeAdForSegmentsCallback callback);
+  void MaybeServeAdForUntargeted(const AdEventList& ad_events,
+                                 MaybeServeAdForSegmentsCallback callback);
 
-  void MaybeServeAd(
-      const CreativeAdNotificationList& ads,
-      MaybeServeAdForSegmentsCallback callback);
+  void MaybeServeAd(const CreativeAdNotificationList& ads,
+                    MaybeServeAdForSegmentsCallback callback);
 
-  CreativeAdNotificationList PaceAds(
-      const CreativeAdNotificationList& ads);
+  CreativeAdNotificationList PaceAds(const CreativeAdNotificationList& ads);
 
-  void MaybeDeliverAd(
-      const CreativeAdNotificationInfo& ad,
-      MaybeServeAdForSegmentsCallback callback);
+  void MaybeDeliverAd(const CreativeAdNotificationInfo& ad,
+                      MaybeServeAdForSegmentsCallback callback);
 
   void FailedToDeliverAd();
 
   void DeliveredAd();
 
-  void RecordAdOpportunityForSegments(
-      const SegmentList& segments);
+  void RecordAdOpportunityForSegments(const SegmentList& segments);
 
   Timer timer_;
 

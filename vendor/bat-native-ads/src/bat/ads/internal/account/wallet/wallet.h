@@ -18,9 +18,7 @@ class Wallet {
 
   ~Wallet();
 
-  bool Set(
-      const std::string& id,
-      const std::string& seed);
+  bool Set(const std::string& id, const std::string& seed);
 
   WalletInfo Get() const;
 

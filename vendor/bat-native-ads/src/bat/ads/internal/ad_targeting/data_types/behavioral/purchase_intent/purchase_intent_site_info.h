@@ -17,18 +17,14 @@ namespace ads {
 struct PurchaseIntentSiteInfo {
  public:
   PurchaseIntentSiteInfo();
-  PurchaseIntentSiteInfo(
-      const SegmentList& segments,
-      const std::string& url_netloc,
-      const uint16_t weight);
-  PurchaseIntentSiteInfo(
-      const PurchaseIntentSiteInfo& info);
+  PurchaseIntentSiteInfo(const SegmentList& segments,
+                         const std::string& url_netloc,
+                         const uint16_t weight);
+  PurchaseIntentSiteInfo(const PurchaseIntentSiteInfo& info);
   ~PurchaseIntentSiteInfo();
 
-  bool operator==(
-      const PurchaseIntentSiteInfo& rhs) const;
-  bool operator!=(
-      const PurchaseIntentSiteInfo& rhs) const;
+  bool operator==(const PurchaseIntentSiteInfo& rhs) const;
+  bool operator!=(const PurchaseIntentSiteInfo& rhs) const;
 
   SegmentList segments;
   std::string url_netloc;
@@ -37,4 +33,4 @@ struct PurchaseIntentSiteInfo {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_SITE_INFO_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_SITE_INFO_H_  NOLINT

@@ -17,12 +17,10 @@ class AdPacing {
 
   ~AdPacing();
 
-  CreativeAdNotificationList PaceAds(
-      const CreativeAdNotificationList& ads);
+  CreativeAdNotificationList PaceAds(const CreativeAdNotificationList& ads);
 
  private:
-  bool ShouldPace(
-      const CreativeAdNotificationInfo& ad);
+  bool ShouldPace(const CreativeAdNotificationInfo& ad);
 };
 
 }  // namespace ad_notifications

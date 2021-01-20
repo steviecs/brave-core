@@ -19,13 +19,12 @@ const uint64_t kNewTabPageAdsPerHourFrequencyCap = 4;
 
 class NewTabPageAdsPerHourFrequencyCap : public PermissionRule {
  public:
-  NewTabPageAdsPerHourFrequencyCap(
-      const AdEventList& ad_events);
+  explicit NewTabPageAdsPerHourFrequencyCap(const AdEventList& ad_events);
 
   ~NewTabPageAdsPerHourFrequencyCap() override;
 
-  NewTabPageAdsPerHourFrequencyCap(
-      const NewTabPageAdsPerHourFrequencyCap&) = delete;
+  NewTabPageAdsPerHourFrequencyCap(const NewTabPageAdsPerHourFrequencyCap&) =
+      delete;
   NewTabPageAdsPerHourFrequencyCap& operator=(
       const NewTabPageAdsPerHourFrequencyCap&) = delete;
 
@@ -38,13 +37,11 @@ class NewTabPageAdsPerHourFrequencyCap : public PermissionRule {
 
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const AdEventList& ad_events);
+  bool DoesRespectCap(const AdEventList& ad_events);
 
-  AdEventList FilterAdEvents(
-      const AdEventList& ad_events) const;
+  AdEventList FilterAdEvents(const AdEventList& ad_events) const;
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_NEW_TAB_PAGE_ADS_PER_HOUR_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_NEW_TAB_PAGE_ADS_PER_HOUR_FREQUENCY_CAP_H_  NOLINT

@@ -17,8 +17,7 @@ namespace ads {
 
 struct CreativeAdInfo {
   CreativeAdInfo();
-  CreativeAdInfo(
-      const CreativeAdInfo& info);
+  CreativeAdInfo(const CreativeAdInfo& info);
   ~CreativeAdInfo();
 
   std::string creative_instance_id;

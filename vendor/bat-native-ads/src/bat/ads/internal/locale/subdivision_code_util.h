@@ -11,11 +11,9 @@
 namespace ads {
 namespace locale {
 
-std::string GetCountryCode(
-    const std::string& code);
+std::string GetCountryCode(const std::string& code);
 
-std::string GetSubdivisionCode(
-    const std::string& code);
+std::string GetSubdivisionCode(const std::string& code);
 
 }  // namespace locale
 }  // namespace ads

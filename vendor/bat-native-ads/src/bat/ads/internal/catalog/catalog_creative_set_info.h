@@ -20,14 +20,11 @@ namespace ads {
 
 struct CatalogCreativeSetInfo {
   CatalogCreativeSetInfo();
-  CatalogCreativeSetInfo(
-      const CatalogCreativeSetInfo& info);
+  CatalogCreativeSetInfo(const CatalogCreativeSetInfo& info);
   ~CatalogCreativeSetInfo();
 
-  bool operator==(
-      const CatalogCreativeSetInfo& rhs) const;
-  bool operator!=(
-      const CatalogCreativeSetInfo& rhs) const;
+  bool operator==(const CatalogCreativeSetInfo& rhs) const;
+  bool operator!=(const CatalogCreativeSetInfo& rhs) const;
 
   std::string creative_set_id;
   unsigned int per_day = 0;

@@ -12,30 +12,21 @@ namespace ads {
 
 class AdType {
  public:
-  enum Value {
-    kUndefined,
-    kAdNotification,
-    kNewTabPageAd,
-    kPromotedContentAd
-  };
+  enum Value { kUndefined, kAdNotification, kNewTabPageAd, kPromotedContentAd };
 
   AdType() = default;
 
   // Allow implicit conversion of the enum value to this wrapper
-  constexpr AdType(
-      const Value& value)
+  constexpr AdType(const Value& value)  // NOLINT(runtime/explicit)
       : value_(value) {}
 
-  AdType(
-      const std::string& value);
+  explicit AdType(const std::string& value);
 
   Value value() const;
   operator std::string() const;
 
-  bool operator==(
-      const AdType& rhs) const;
-  bool operator!=(
-      const AdType& rhs) const;
+  bool operator==(const AdType& rhs) const;
+  bool operator!=(const AdType& rhs) const;
 
  private:
   Value value_;

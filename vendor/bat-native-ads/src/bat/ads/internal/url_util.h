@@ -10,19 +10,13 @@
 
 namespace ads {
 
-bool DoesUrlMatchPattern(
-    const std::string& url,
-    const std::string& pattern);
+bool DoesUrlMatchPattern(const std::string& url, const std::string& pattern);
 
-bool DoesUrlHaveSchemeHTTPOrHTTPS(
-    const std::string& url);
+bool DoesUrlHaveSchemeHTTPOrHTTPS(const std::string& url);
 
-std::string GetHostFromUrl(
-    const std::string& url);
+std::string GetHostFromUrl(const std::string& url);
 
-bool SameDomainOrHost(
-    const std::string& url1,
-    const std::string& url2);
+bool SameDomainOrHost(const std::string& url1, const std::string& url2);
 
 }  // namespace ads
 

@@ -27,18 +27,14 @@ class Conversions {
 
   ~Conversions();
 
-  void AddObserver(
-      ConversionsObserver* observer);
-  void RemoveObserver(
-      ConversionsObserver* observer);
+  void AddObserver(ConversionsObserver* observer);
+  void RemoveObserver(ConversionsObserver* observer);
 
-  void Initialize(
-      InitializeCallback callback);
+  void Initialize(InitializeCallback callback);
 
   bool ShouldAllow() const;
 
-  void MaybeConvert(
-      const std::vector<std::string>& redirect_chain);
+  void MaybeConvert(const std::vector<std::string>& redirect_chain);
 
   void StartTimerIfReady();
 
@@ -52,54 +48,39 @@ class Conversions {
 
   Timer timer_;
 
-  void CheckRedirectChain(
-      const std::vector<std::string>& redirect_chain);
+  void CheckRedirectChain(const std::vector<std::string>& redirect_chain);
 
-  void Convert(
-      const AdEventInfo& ad_event);
+  void Convert(const AdEventInfo& ad_event);
 
   ConversionList FilterConversions(
       const std::vector<std::string>& redirect_chain,
       const ConversionList& conversions);
-  ConversionList SortConversions(
-      const ConversionList& conversions);
+  ConversionList SortConversions(const ConversionList& conversions);
 
-  void AddItemToQueue(
-      const AdEventInfo& ad_event);
-  bool RemoveItemFromQueue(
-      const std::string& creative_instance_id);
-  void ProcessQueueItem(
-      const ConversionQueueItemInfo& queue_item);
+  void AddItemToQueue(const AdEventInfo& ad_event);
+  bool RemoveItemFromQueue(const std::string& creative_instance_id);
+  void ProcessQueueItem(const ConversionQueueItemInfo& queue_item);
   void ProcessQueue();
 
-  void StartTimer(
-      const ConversionQueueItemInfo& queue_item);
+  void StartTimer(const ConversionQueueItemInfo& queue_item);
 
   void Save();
-  void OnSaved(
-      const Result result);
+  void OnSaved(const Result result);
 
   std::string ToJson();
   base::Value GetAsList();
 
   void Load();
-  void OnLoaded(
-      const Result result,
-      const std::string& json);
+  void OnLoaded(const Result result, const std::string& json);
 
-  bool FromJson(
-      const std::string& json);
-  ConversionQueueItemList GetFromList(
-      const base::ListValue* list) const;
-  bool GetFromDictionary(
-      const base::DictionaryValue* dictionary,
-      ConversionQueueItemInfo* info) const;
+  bool FromJson(const std::string& json);
+  ConversionQueueItemList GetFromList(const base::ListValue* list) const;
+  bool GetFromDictionary(const base::DictionaryValue* dictionary,
+                         ConversionQueueItemInfo* info) const;
 
-  void NotifyConversion(
-      const std::string& creative_instance_id);
+  void NotifyConversion(const std::string& creative_instance_id);
 
-  void NotifyConversionFailed(
-      const std::string& creative_instance_id);
+  void NotifyConversionFailed(const std::string& creative_instance_id);
 };
 
 }  // namespace ads

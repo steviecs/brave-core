@@ -24,13 +24,11 @@ struct AdPreferencesInfo;
 
 struct ClientInfo {
   ClientInfo();
-  ClientInfo(
-      const ClientInfo& state);
+  ClientInfo(const ClientInfo& state);
   ~ClientInfo();
 
   std::string ToJson();
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
   AdPreferencesInfo ad_preferences;
   std::deque<AdHistoryInfo> ads_shown_history;

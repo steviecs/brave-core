@@ -15,9 +15,8 @@ namespace ads {
 struct PurchaseIntentSegmentKeywordInfo {
  public:
   PurchaseIntentSegmentKeywordInfo();
-  PurchaseIntentSegmentKeywordInfo(
-      const SegmentList& segments,
-      const std::string& keywords);
+  PurchaseIntentSegmentKeywordInfo(const SegmentList& segments,
+                                   const std::string& keywords);
   PurchaseIntentSegmentKeywordInfo(
       const PurchaseIntentSegmentKeywordInfo& info);
   ~PurchaseIntentSegmentKeywordInfo();
@@ -28,4 +27,4 @@ struct PurchaseIntentSegmentKeywordInfo {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_SEGMENT_KEYWORD_INFO_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_SEGMENT_KEYWORD_INFO_H_  NOLINT

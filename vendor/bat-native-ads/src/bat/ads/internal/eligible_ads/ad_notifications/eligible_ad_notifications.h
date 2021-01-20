@@ -26,10 +26,9 @@ class EligibleAds {
 
   ~EligibleAds();
 
-  CreativeAdNotificationList Get(
-      const CreativeAdNotificationList& ads,
-      const CreativeAdInfo& last_delivered_ad,
-      const AdEventList& ad_events);
+  CreativeAdNotificationList Get(const CreativeAdNotificationList& ads,
+                                 const CreativeAdInfo& last_delivered_ad,
+                                 const AdEventList& ad_events);
 
  private:
   ad_targeting::geographic::SubdivisionTargeting* subdivision_targeting_;

@@ -15,11 +15,10 @@
 
 namespace ads {
 
-void Log(
-    const char* file,
-    const int line,
-    const int verbose_level,
-    const std::string& message);
+void Log(const char* file,
+         const int line,
+         const int verbose_level,
+         const std::string& message);
 
 // |verbose_level| is an arbitrary integer value (higher numbers should be used
 // for more verbose logging), so you can make your logging levels as granular as
@@ -46,8 +45,9 @@ void Log(
 //   7 URL response (with large body), response headers and request headers
 //   8 Database queries
 
-#define BLOG(verbose_level, stream) ads::Log(__FILE__, __LINE__, \
-    verbose_level, (std::ostringstream() << stream).str());
+#define BLOG(verbose_level, stream)           \
+  ads::Log(__FILE__, __LINE__, verbose_level, \
+           (std::ostringstream() << stream).str());
 
 // You can also do conditional verbose logging when some extra computation and
 // preparation for logs is not needed:
@@ -55,7 +55,7 @@ void Log(
 //   BLOG_IF(2, bat_tokens < 10, "Got too few Basic Attention Tokens!");
 
 #define BLOG_IF(verbose_level, condition, stream) \
-    !(condition) ? (void) 0 : BLOG(verbose_level, stream)
+  !(condition) ? (void)0 : BLOG(verbose_level, stream)
 
 }  // namespace ads
 

@@ -25,19 +25,16 @@ class EpsilonGreedyBandit : public Processor<BanditFeedbackInfo> {
 
   ~EpsilonGreedyBandit() override;
 
-  void Process(
-      const BanditFeedbackInfo& feedback) override;
+  void Process(const BanditFeedbackInfo& feedback) override;
 
  private:
   void InitializeArms() const;
 
-  void UpdateArm(
-      const uint64_t reward,
-      const std::string& segment) const;
+  void UpdateArm(const uint64_t reward, const std::string& segment) const;
 };
 
 }  // namespace processor
 }  // namespace ad_targeting
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_PROCESSORS_BEHAVIORAL_BANDITS_EPSILON_GREEDY_BANDIT_PROCESSOR_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_PROCESSORS_BEHAVIORAL_BANDITS_EPSILON_GREEDY_BANDIT_PROCESSOR_H_  NOLINT

@@ -12,16 +12,15 @@
 
 namespace ads {
 
-class UnblindedTokensFrequencyCap : public PermissionRule  {
+class UnblindedTokensFrequencyCap : public PermissionRule {
  public:
   UnblindedTokensFrequencyCap();
 
   ~UnblindedTokensFrequencyCap() override;
 
-  UnblindedTokensFrequencyCap(
-      const UnblindedTokensFrequencyCap&) = delete;
-  UnblindedTokensFrequencyCap& operator=(
-      const UnblindedTokensFrequencyCap&) = delete;
+  UnblindedTokensFrequencyCap(const UnblindedTokensFrequencyCap&) = delete;
+  UnblindedTokensFrequencyCap& operator=(const UnblindedTokensFrequencyCap&) =
+      delete;
 
   bool ShouldAllow() override;
 
@@ -35,4 +34,4 @@ class UnblindedTokensFrequencyCap : public PermissionRule  {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_UNBLINDED_TOKENS_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_UNBLINDED_TOKENS_FREQUENCY_CAP_H_  NOLINT

@@ -17,14 +17,12 @@ struct StatementInfo;
 
 class Statement {
  public:
-  Statement(
-      AdRewards* ad_rewards);
+  explicit Statement(AdRewards* ad_rewards);
 
   ~Statement();
 
-  StatementInfo Get(
-      const int64_t from_timestamp,
-      const int64_t to_timestamp) const;
+  StatementInfo Get(const int64_t from_timestamp,
+                    const int64_t to_timestamp) const;
 
  private:
   double GetEarningsForThisMonth() const;

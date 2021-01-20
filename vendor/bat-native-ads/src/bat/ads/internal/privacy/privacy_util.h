@@ -13,11 +13,10 @@
 namespace ads {
 namespace privacy {
 
-using challenge_bypass_ristretto::Token;
 using challenge_bypass_ristretto::BlindedToken;
+using challenge_bypass_ristretto::Token;
 
-std::vector<BlindedToken> BlindTokens(
-    const std::vector<Token>& tokens);
+std::vector<BlindedToken> BlindTokens(const std::vector<Token>& tokens);
 
 }  // namespace privacy
 }  // namespace ads

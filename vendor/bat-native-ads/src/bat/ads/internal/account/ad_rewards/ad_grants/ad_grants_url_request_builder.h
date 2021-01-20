@@ -15,8 +15,7 @@ namespace ads {
 
 class AdGrantsUrlRequestBuilder : UrlRequestBuilder {
  public:
-  AdGrantsUrlRequestBuilder(
-      const WalletInfo& wallet);
+  explicit AdGrantsUrlRequestBuilder(const WalletInfo& wallet);
 
   ~AdGrantsUrlRequestBuilder() override;
 
@@ -30,4 +29,4 @@ class AdGrantsUrlRequestBuilder : UrlRequestBuilder {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_REWARDS_AD_GRANTS_AD_GRANTS_URL_REQUEST_BUILDER_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_REWARDS_AD_GRANTS_AD_GRANTS_URL_REQUEST_BUILDER_H_  NOLINT

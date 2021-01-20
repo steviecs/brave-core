@@ -18,8 +18,8 @@ class AllowNotificationsFrequencyCap : public PermissionRule {
 
   ~AllowNotificationsFrequencyCap() override;
 
-  AllowNotificationsFrequencyCap(
-      const AllowNotificationsFrequencyCap&) = delete;
+  AllowNotificationsFrequencyCap(const AllowNotificationsFrequencyCap&) =
+      delete;
   AllowNotificationsFrequencyCap& operator=(
       const AllowNotificationsFrequencyCap&) = delete;
 
@@ -35,4 +35,4 @@ class AllowNotificationsFrequencyCap : public PermissionRule {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_ALLOW_NOTIFICATIONS_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_ALLOW_NOTIFICATIONS_FREQUENCY_CAP_H_  NOLINT

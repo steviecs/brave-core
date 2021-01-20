@@ -21,14 +21,10 @@ class Migration {
 
   ~Migration();
 
-  void FromVersion(
-      const int from_version,
-      ResultCallback callback);
+  void FromVersion(const int from_version, ResultCallback callback);
 
  private:
-  void ToVersion(
-      DBTransaction* transaction,
-      const int to_version);
+  void ToVersion(DBTransaction* transaction, const int to_version);
 };
 
 }  // namespace database

@@ -19,9 +19,7 @@ class Table {
 
   virtual std::string get_table_name() const = 0;
 
-  virtual void Migrate(
-      DBTransaction* transaction,
-      const int to_version) = 0;
+  virtual void Migrate(DBTransaction* transaction, const int to_version) = 0;
 };
 
 }  // namespace database

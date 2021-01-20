@@ -13,15 +13,12 @@ namespace ads {
 struct EpsilonGreedyBanditArmInfo {
   EpsilonGreedyBanditArmInfo();
 
-  EpsilonGreedyBanditArmInfo(
-      const EpsilonGreedyBanditArmInfo& info);
+  EpsilonGreedyBanditArmInfo(const EpsilonGreedyBanditArmInfo& info);
 
   ~EpsilonGreedyBanditArmInfo();
 
-  bool operator==(
-      const EpsilonGreedyBanditArmInfo& rhs) const;
-  bool operator!=(
-      const EpsilonGreedyBanditArmInfo& rhs) const;
+  bool operator==(const EpsilonGreedyBanditArmInfo& rhs) const;
+  bool operator!=(const EpsilonGreedyBanditArmInfo& rhs) const;
 
   bool IsValid() const;
 
@@ -32,4 +29,4 @@ struct EpsilonGreedyBanditArmInfo {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_BANDITS_EPSILON_GREEDY_BANDIT_ARM_INFO_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_BANDITS_EPSILON_GREEDY_BANDIT_ARM_INFO_H_  NOLINT

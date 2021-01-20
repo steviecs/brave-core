@@ -15,13 +15,11 @@ namespace ads {
 
 struct FilteredAdInfo {
   FilteredAdInfo();
-  FilteredAdInfo(
-      const FilteredAdInfo& ad);
+  FilteredAdInfo(const FilteredAdInfo& ad);
   ~FilteredAdInfo();
 
   std::string ToJson() const;
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
   std::string creative_instance_id;
   std::string creative_set_id;

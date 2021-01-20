@@ -8,8 +8,8 @@
 
 #include <vector>
 
-#include "testing/gmock/include/gmock/gmock.h"
 #include "bat/ads/internal/privacy/tokens/token_generator.h"
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace ads {
 namespace privacy {
@@ -20,8 +20,7 @@ class TokenGeneratorMock : public TokenGenerator {
 
   ~TokenGeneratorMock() override;
 
-  MOCK_METHOD(std::vector<Token>, Generate, (
-      const int count), (const));
+  MOCK_METHOD(std::vector<Token>, Generate, (const int count), (const));
 };
 
 }  // namespace privacy

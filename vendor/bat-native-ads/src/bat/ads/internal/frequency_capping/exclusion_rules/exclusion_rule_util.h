@@ -14,9 +14,7 @@
 namespace ads {
 
 template <typename T>
-bool ShouldExclude(
-    const T& ad,
-    ExclusionRule<T>* exclusion_rule) {
+bool ShouldExclude(const T& ad, ExclusionRule<T>* exclusion_rule) {
   DCHECK(exclusion_rule);
 
   if (!exclusion_rule->ShouldExclude(ad)) {
@@ -33,4 +31,4 @@ bool ShouldExclude(
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_EXCLUSION_RULE_UTIL_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_EXCLUSION_RULE_UTIL_H_  NOLINT

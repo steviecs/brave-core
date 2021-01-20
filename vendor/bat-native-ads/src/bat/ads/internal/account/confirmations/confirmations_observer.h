@@ -15,13 +15,11 @@ struct ConfirmationInfo;
 class ConfirmationsObserver : public base::CheckedObserver {
  public:
   // Invoked when an ad confirmation is successful
-  virtual void OnConfirmAd(
-      const double estimated_redemption_value,
-      const ConfirmationInfo& confirmation) {}
+  virtual void OnConfirmAd(const double estimated_redemption_value,
+                           const ConfirmationInfo& confirmation) {}
 
   // Invoked when an ad confirmation fails
-  virtual void OnConfirmAdFailed(
-      const ConfirmationInfo& confirmation) {}
+  virtual void OnConfirmAdFailed(const ConfirmationInfo& confirmation) {}
 
  protected:
   ~ConfirmationsObserver() override = default;

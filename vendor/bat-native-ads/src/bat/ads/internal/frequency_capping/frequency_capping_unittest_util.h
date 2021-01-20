@@ -14,16 +14,14 @@
 
 namespace ads {
 
-AdEventInfo GenerateAdEvent(
-    const AdType type,
-    const CreativeAdInfo& ad,
-    const ConfirmationType& confirmation_type);
+AdEventInfo GenerateAdEvent(const AdType type,
+                            const CreativeAdInfo& ad,
+                            const ConfirmationType& confirmation_type);
 
-AdEventInfo GenerateAdEvent(
-    const AdType type,
-    const AdInfo& ad,
-    const ConfirmationType& confirmation_type);
+AdEventInfo GenerateAdEvent(const AdType type,
+                            const AdInfo& ad,
+                            const ConfirmationType& confirmation_type);
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_FREQUENCY_CAPPING_UNITTEST_UTIL_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_FREQUENCY_CAPPING_UNITTEST_UTIL_H_

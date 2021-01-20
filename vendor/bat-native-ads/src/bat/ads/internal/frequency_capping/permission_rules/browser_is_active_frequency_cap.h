@@ -19,8 +19,8 @@ class BrowserIsActiveFrequencyCap : public PermissionRule {
   ~BrowserIsActiveFrequencyCap() override;
 
   BrowserIsActiveFrequencyCap(const BrowserIsActiveFrequencyCap&) = delete;
-  BrowserIsActiveFrequencyCap& operator=(
-      const BrowserIsActiveFrequencyCap&) = delete;
+  BrowserIsActiveFrequencyCap& operator=(const BrowserIsActiveFrequencyCap&) =
+      delete;
 
   bool ShouldAllow() override;
 
@@ -34,4 +34,4 @@ class BrowserIsActiveFrequencyCap : public PermissionRule {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_BROWSER_IS_ACTIVE_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_BROWSER_IS_ACTIVE_FREQUENCY_CAP_H_  NOLINT

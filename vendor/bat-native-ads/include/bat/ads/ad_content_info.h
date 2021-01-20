@@ -17,24 +17,16 @@ namespace ads {
 
 struct ADS_EXPORT AdContentInfo {
   AdContentInfo();
-  AdContentInfo(
-      const AdContentInfo& info);
+  AdContentInfo(const AdContentInfo& info);
   ~AdContentInfo();
 
-  bool operator==(
-      const AdContentInfo& rhs) const;
-  bool operator!=(
-      const AdContentInfo& rhs) const;
+  bool operator==(const AdContentInfo& rhs) const;
+  bool operator!=(const AdContentInfo& rhs) const;
 
   std::string ToJson() const;
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
-  enum class LikeAction {
-    kNeutral = 0,
-    kThumbsUp,
-    kThumbsDown
-  };
+  enum class LikeAction { kNeutral = 0, kThumbsUp, kThumbsDown };
 
   AdType type = AdType::kUndefined;
   std::string uuid;

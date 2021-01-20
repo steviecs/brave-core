@@ -15,8 +15,7 @@ class Processor {
  public:
   virtual ~Processor() = default;
 
-  virtual void Process(
-      const T&) = 0;
+  virtual void Process(const T&) = 0;
 };
 
 }  // namespace processor

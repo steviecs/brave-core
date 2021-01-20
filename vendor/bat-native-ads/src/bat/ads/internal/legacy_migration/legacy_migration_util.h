@@ -10,8 +10,7 @@
 
 namespace ads {
 
-uint64_t MigrateTimestampToDoubleT(
-    const uint64_t timestamp_in_seconds);
+uint64_t MigrateTimestampToDoubleT(const uint64_t timestamp_in_seconds);
 
 }  // namespace ads
 

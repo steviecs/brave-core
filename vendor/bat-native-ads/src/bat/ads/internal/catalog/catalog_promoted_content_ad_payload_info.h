@@ -16,10 +16,8 @@ struct CatalogPromotedContentAdPayloadInfo {
       const CatalogPromotedContentAdPayloadInfo& info);
   ~CatalogPromotedContentAdPayloadInfo();
 
-  bool operator==(
-      const CatalogPromotedContentAdPayloadInfo& rhs) const;
-  bool operator!=(
-      const CatalogPromotedContentAdPayloadInfo& rhs) const;
+  bool operator==(const CatalogPromotedContentAdPayloadInfo& rhs) const;
+  bool operator!=(const CatalogPromotedContentAdPayloadInfo& rhs) const;
 
   std::string title;
   std::string description;

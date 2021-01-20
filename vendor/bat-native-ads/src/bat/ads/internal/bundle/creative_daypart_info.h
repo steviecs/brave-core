@@ -24,4 +24,3 @@ using CreativeDaypartList = std::vector<CreativeDaypartInfo>;
 }  // namespace ads
 
 #endif  // BAT_ADS_INTERNAL_CATALOG_CATALOG_DAYPART_INFO_H_
-

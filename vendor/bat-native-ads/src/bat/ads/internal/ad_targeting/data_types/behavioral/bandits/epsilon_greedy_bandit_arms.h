@@ -23,14 +23,12 @@ class EpsilonGreedyBanditArms {
 
   ~EpsilonGreedyBanditArms();
 
-  static EpsilonGreedyBanditArmMap FromJson(
-      const std::string& json);
+  static EpsilonGreedyBanditArmMap FromJson(const std::string& json);
 
-  static std::string ToJson(
-      const EpsilonGreedyBanditArmMap& arms);
+  static std::string ToJson(const EpsilonGreedyBanditArmMap& arms);
 };
 
 }  // namespace ad_targeting
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_BANDITS_EPSILON_GREEDY_BANDIT_ARMS_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_BANDITS_EPSILON_GREEDY_BANDIT_ARMS_H_  NOLINT

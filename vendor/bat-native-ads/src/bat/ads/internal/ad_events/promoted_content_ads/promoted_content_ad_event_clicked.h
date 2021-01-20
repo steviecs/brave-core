@@ -20,11 +20,10 @@ class AdEventClicked : public AdEvent<PromotedContentAdInfo> {
 
   ~AdEventClicked() override;
 
-  void FireEvent(
-      const PromotedContentAdInfo& ad) override;
+  void FireEvent(const PromotedContentAdInfo& ad) override;
 };
 
 }  // namespace promoted_content_ads
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_EVENTS_PROMOTED_CONTENT_ADS_PROMOTED_CONTENT_AD_EVENT_CLICKED_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_EVENTS_PROMOTED_CONTENT_ADS_PROMOTED_CONTENT_AD_EVENT_CLICKED_H_  NOLINT

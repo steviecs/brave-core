@@ -16,8 +16,8 @@
 
 namespace ads {
 
-using GetConversionsCallback = std::function<void(const Result,
-    const ConversionList&)>;
+using GetConversionsCallback =
+    std::function<void(const Result, const ConversionList&)>;
 
 namespace database {
 namespace table {
@@ -28,48 +28,33 @@ class Conversions : public Table {
 
   ~Conversions() override;
 
-  void Save(
-      const ConversionList& conversions,
-      ResultCallback callback);
+  void Save(const ConversionList& conversions, ResultCallback callback);
 
-  void GetAll(
-      GetConversionsCallback callback);
+  void GetAll(GetConversionsCallback callback);
 
-  void PurgeExpired(
-      ResultCallback callback);
+  void PurgeExpired(ResultCallback callback);
 
   std::string get_table_name() const override;
 
-  void Migrate(
-      DBTransaction* transaction,
-      const int to_version) override;
+  void Migrate(DBTransaction* transaction, const int to_version) override;
 
  private:
-  void InsertOrUpdate(
-      DBTransaction* transaction,
-      const ConversionList& conversion);
+  void InsertOrUpdate(DBTransaction* transaction,
+                      const ConversionList& conversion);
 
-  int BindParameters(
-      DBCommand* command,
-      const ConversionList& conversion);
+  int BindParameters(DBCommand* command, const ConversionList& conversion);
 
-  std::string BuildInsertOrUpdateQuery(
-      DBCommand* command,
-      const ConversionList& conversions);
+  std::string BuildInsertOrUpdateQuery(DBCommand* command,
+                                       const ConversionList& conversions);
 
-  void OnGetConversions(
-      DBCommandResponsePtr response,
-      GetConversionsCallback callback);
+  void OnGetConversions(DBCommandResponsePtr response,
+                        GetConversionsCallback callback);
 
-  ConversionInfo GetConversionFromRecord(
-      DBRecord* record) const;
+  ConversionInfo GetConversionFromRecord(DBRecord* record) const;
 
-  void CreateTableV1(
-      DBTransaction* transaction);
-  void CreateIndexV1(
-      DBTransaction* transaction);
-  void MigrateToV1(
-      DBTransaction* transaction);
+  void CreateTableV1(DBTransaction* transaction);
+  void CreateIndexV1(DBTransaction* transaction);
+  void MigrateToV1(DBTransaction* transaction);
 };
 
 }  // namespace table

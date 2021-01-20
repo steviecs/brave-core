@@ -16,8 +16,7 @@ namespace ads {
 
 class PaymentsUrlRequestBuilder : UrlRequestBuilder {
  public:
-  PaymentsUrlRequestBuilder(
-      const WalletInfo& wallet);
+  explicit PaymentsUrlRequestBuilder(const WalletInfo& wallet);
 
   ~PaymentsUrlRequestBuilder() override;
 
@@ -28,12 +27,9 @@ class PaymentsUrlRequestBuilder : UrlRequestBuilder {
 
   std::string BuildUrl() const;
 
-  std::vector<std::string> BuildHeaders(
-      const std::string& body) const;
-  std::string BuildDigestHeaderValue(
-      const std::string& body) const;
-  std::string BuildSignatureHeaderValue(
-      const std::string& body) const;
+  std::vector<std::string> BuildHeaders(const std::string& body) const;
+  std::string BuildDigestHeaderValue(const std::string& body) const;
+  std::string BuildSignatureHeaderValue(const std::string& body) const;
 
   std::string BuildBody() const;
 };

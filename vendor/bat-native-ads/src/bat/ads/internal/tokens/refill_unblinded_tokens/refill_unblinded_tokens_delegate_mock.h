@@ -6,20 +6,19 @@
 #ifndef BAT_ADS_INTERNAL_TOKENS_REFILL_UNBLINDED_TOKENS_REFILL_UNBLINDED_TOKENS_DELEGATE_MOCK_H_  // NOLINT
 #define BAT_ADS_INTERNAL_TOKENS_REFILL_UNBLINDED_TOKENS_REFILL_UNBLINDED_TOKENS_DELEGATE_MOCK_H_  // NOLINT
 
-#include "testing/gmock/include/gmock/gmock.h"
 #include "bat/ads/internal/tokens/refill_unblinded_tokens/refill_unblinded_tokens_delegate.h"
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace ads {
 
-class RefillUnblindedTokensDelegateMock
-    : public RefillUnblindedTokensDelegate {
+class RefillUnblindedTokensDelegateMock : public RefillUnblindedTokensDelegate {
  public:
   RefillUnblindedTokensDelegateMock();
 
   ~RefillUnblindedTokensDelegateMock() override;
 
-  RefillUnblindedTokensDelegateMock(
-      const RefillUnblindedTokensDelegateMock&) = delete;
+  RefillUnblindedTokensDelegateMock(const RefillUnblindedTokensDelegateMock&) =
+      delete;
   RefillUnblindedTokensDelegateMock& operator=(
       const RefillUnblindedTokensDelegateMock&) = delete;
 
@@ -33,4 +32,4 @@ class RefillUnblindedTokensDelegateMock
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_TOKENS_REFILL_UNBLINDED_TOKENS_REFILL_UNBLINDED_TOKENS_DELEGATE_MOCK_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_TOKENS_REFILL_UNBLINDED_TOKENS_REFILL_UNBLINDED_TOKENS_DELEGATE_MOCK_H_  NOLINT

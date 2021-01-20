@@ -18,12 +18,10 @@ struct PromotedContentAdInfo;
 class PromotedContentAdObserver : public base::CheckedObserver {
  public:
   // Invoked when a promoted content ad is viewed
-  virtual void OnPromotedContentAdViewed(
-      const PromotedContentAdInfo& ad) {}
+  virtual void OnPromotedContentAdViewed(const PromotedContentAdInfo& ad) {}
 
   // Invoked when a promoted content ad is clicked
-  virtual void OnPromotedContentAdClicked(
-      const PromotedContentAdInfo& ad) {}
+  virtual void OnPromotedContentAdClicked(const PromotedContentAdInfo& ad) {}
 
   // Invoked when a promoted content ad event fails
   virtual void OnPromotedContentAdEventFailed(
@@ -37,4 +35,4 @@ class PromotedContentAdObserver : public base::CheckedObserver {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_ADS_PROMOTED_CONTENT_ADS_PROMOTED_CONTENT_AD_OBSERVER_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_ADS_PROMOTED_CONTENT_ADS_PROMOTED_CONTENT_AD_OBSERVER_H_  NOLINT

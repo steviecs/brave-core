@@ -12,9 +12,7 @@
 namespace ads {
 namespace database {
 
-void OnResultCallback(
-    DBCommandResponsePtr response,
-    ResultCallback callback);
+void OnResultCallback(DBCommandResponsePtr response, ResultCallback callback);
 
 }  // namespace database
 }  // namespace ads

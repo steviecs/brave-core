@@ -38,8 +38,7 @@ class UserActivity {
 
   static bool HasInstance();
 
-  void RecordEvent(
-      const UserActivityEventType event);
+  void RecordEvent(const UserActivityEventType event);
 
   const UserActivityEventHistoryMap& get_history() const;
 

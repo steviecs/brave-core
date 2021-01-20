@@ -17,11 +17,9 @@ struct CreativeAdNotificationInfo : CreativeAdInfo {
   CreativeAdNotificationInfo();
   ~CreativeAdNotificationInfo();
 
-  bool operator==(
-      const CreativeAdNotificationInfo& rhs) const;
+  bool operator==(const CreativeAdNotificationInfo& rhs) const;
 
-  bool operator!=(
-      const CreativeAdNotificationInfo& rhs) const;
+  bool operator!=(const CreativeAdNotificationInfo& rhs) const;
 
   std::string title;
   std::string body;

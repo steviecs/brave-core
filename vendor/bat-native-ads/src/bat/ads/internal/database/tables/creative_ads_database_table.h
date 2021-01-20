@@ -23,32 +23,23 @@ class CreativeAds : public Table {
 
   ~CreativeAds() override;
 
-  void InsertOrUpdate(
-      DBTransaction* transaction,
-      const CreativeAdList& creative_ads);
+  void InsertOrUpdate(DBTransaction* transaction,
+                      const CreativeAdList& creative_ads);
 
-  void Delete(
-      ResultCallback callback);
+  void Delete(ResultCallback callback);
 
   std::string get_table_name() const override;
 
-  void Migrate(
-      DBTransaction* transaction,
-      const int to_version) override;
+  void Migrate(DBTransaction* transaction, const int to_version) override;
 
  private:
-  int BindParameters(
-      DBCommand* command,
-      const CreativeAdList& creative_ads);
+  int BindParameters(DBCommand* command, const CreativeAdList& creative_ads);
 
-  std::string BuildInsertOrUpdateQuery(
-      DBCommand* command,
-      const CreativeAdList& creative_ads);
+  std::string BuildInsertOrUpdateQuery(DBCommand* command,
+                                       const CreativeAdList& creative_ads);
 
-  void CreateTableV9(
-      DBTransaction* transaction);
-  void MigrateToV9(
-      DBTransaction* transaction);
+  void CreateTableV9(DBTransaction* transaction);
+  void MigrateToV9(DBTransaction* transaction);
 };
 
 }  // namespace table

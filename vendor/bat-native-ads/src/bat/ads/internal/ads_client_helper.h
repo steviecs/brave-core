@@ -12,8 +12,7 @@ namespace ads {
 
 class AdsClientHelper {
  public:
-  AdsClientHelper(
-      AdsClient* ads_client);
+  explicit AdsClientHelper(AdsClient* ads_client);
 
   ~AdsClientHelper();
 

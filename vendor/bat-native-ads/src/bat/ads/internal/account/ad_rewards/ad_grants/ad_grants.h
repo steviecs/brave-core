@@ -18,19 +18,16 @@ class AdGrants {
 
   ~AdGrants();
 
-  bool SetFromJson(
-      const std::string& json);
-  bool SetFromDictionary(
-      base::Value* dictionary);
+  bool SetFromJson(const std::string& json);
+  bool SetFromDictionary(base::Value* dictionary);
 
   double GetBalance() const;
 
  private:
   double balance_ = 0.0;
 
-  bool GetAmountFromDictionary(
-      base::DictionaryValue* dictionary,
-      double* amount) const;
+  bool GetAmountFromDictionary(base::DictionaryValue* dictionary,
+                               double* amount) const;
 };
 
 }  // namespace ads

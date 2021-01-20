@@ -16,15 +16,13 @@ namespace ads {
 
 struct ADS_EXPORT NewTabPageAdInfo : AdInfo {
   NewTabPageAdInfo();
-  NewTabPageAdInfo(
-      const NewTabPageAdInfo& info);
+  NewTabPageAdInfo(const NewTabPageAdInfo& info);
   ~NewTabPageAdInfo();
 
   bool IsValid() const;
 
   std::string ToJson() const;
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
   std::string company_name;
   std::string alt;

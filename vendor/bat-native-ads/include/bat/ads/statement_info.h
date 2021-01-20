@@ -18,18 +18,14 @@ namespace ads {
 
 struct ADS_EXPORT StatementInfo {
   StatementInfo();
-  StatementInfo(
-      const StatementInfo& info);
+  StatementInfo(const StatementInfo& info);
   ~StatementInfo();
 
-  bool operator==(
-      const StatementInfo& rhs) const;
-  bool operator!=(
-      const StatementInfo& rhs) const;
+  bool operator==(const StatementInfo& rhs) const;
+  bool operator!=(const StatementInfo& rhs) const;
 
   std::string ToJson() const;
-  bool FromJson(
-      const std::string& json);
+  bool FromJson(const std::string& json);
 
   double estimated_pending_rewards = 0.0;
   uint64_t next_payment_date = 0;

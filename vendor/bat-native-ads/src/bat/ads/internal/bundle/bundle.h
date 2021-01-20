@@ -22,12 +22,10 @@ class Bundle {
 
   ~Bundle();
 
-  void BuildFromCatalog(
-      const Catalog& catalog);
+  void BuildFromCatalog(const Catalog& catalog);
 
  private:
-  BundleState FromCatalog(
-      const Catalog& catalog) const;
+  BundleState FromCatalog(const Catalog& catalog) const;
 
   void DeleteDatabaseTables();
 
@@ -50,8 +48,7 @@ class Bundle {
       const CreativePromotedContentAdList& creative_promoted_content_ads);
 
   void PurgeExpiredConversions();
-  void SaveConversions(
-      const ConversionList& conversions);
+  void SaveConversions(const ConversionList& conversions);
 };
 
 }  // namespace ads

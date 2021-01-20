@@ -26,18 +26,16 @@ class MarkedToNoLongerReceiveFrequencyCap
   MarkedToNoLongerReceiveFrequencyCap& operator=(
       const MarkedToNoLongerReceiveFrequencyCap&) = delete;
 
-  bool ShouldExclude(
-      const CreativeAdInfo& ad) override;
+  bool ShouldExclude(const CreativeAdInfo& ad) override;
 
   std::string get_last_message() const override;
 
  private:
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const CreativeAdInfo& ad);
+  bool DoesRespectCap(const CreativeAdInfo& ad);
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_MARKED_TO_NO_LONGER_RECEIVE_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_EXCLUSION_RULES_MARKED_TO_NO_LONGER_RECEIVE_FREQUENCY_CAP_H_  NOLINT

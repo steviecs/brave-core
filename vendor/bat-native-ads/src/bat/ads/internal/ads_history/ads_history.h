@@ -29,27 +29,24 @@ namespace history {
 // confirmation types (viewed and clicked)
 // |kPromotedContentAdsPerDayFrequencyCap| promoted content ads per day with 2
 // confirmation types (viewed and clicked)
-const size_t kMaximumEntries = 7 * ((kAdNotificationsPerDayFrequencyCap * 2) +
-    (kNewTabPageAdsPerDayFrequencyCap * 2) +
-        (kPromotedContentAdsPerDayFrequencyCap * 2));
+const size_t kMaximumEntries =
+    7 * ((kAdNotificationsPerDayFrequencyCap * 2) +
+         (kNewTabPageAdsPerDayFrequencyCap * 2) +
+         (kPromotedContentAdsPerDayFrequencyCap * 2));
 
-AdsHistoryInfo Get(
-    const AdsHistoryInfo::FilterType filter_type,
-    const AdsHistoryInfo::SortType sort_type,
-    const uint64_t from_timestamp,
-    const uint64_t to_timestamp);
+AdsHistoryInfo Get(const AdsHistoryInfo::FilterType filter_type,
+                   const AdsHistoryInfo::SortType sort_type,
+                   const uint64_t from_timestamp,
+                   const uint64_t to_timestamp);
 
-void AddAdNotification(
-    const AdNotificationInfo& ad,
-    const ConfirmationType& confirmation_type);
+void AddAdNotification(const AdNotificationInfo& ad,
+                       const ConfirmationType& confirmation_type);
 
-void AddNewTabPageAd(
-    const NewTabPageAdInfo& ad,
-    const ConfirmationType& confirmation_type);
+void AddNewTabPageAd(const NewTabPageAdInfo& ad,
+                     const ConfirmationType& confirmation_type);
 
-void AddPromotedContentAd(
-    const PromotedContentAdInfo& ad,
-    const ConfirmationType& confirmation_type);
+void AddPromotedContentAd(const PromotedContentAdInfo& ad,
+                          const ConfirmationType& confirmation_type);
 
 }  // namespace history
 }  // namespace ads

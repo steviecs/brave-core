@@ -18,14 +18,11 @@ using challenge_bypass_ristretto::UnblindedToken;
 
 struct UnblindedTokenInfo {
   UnblindedTokenInfo();
-  UnblindedTokenInfo(
-      const UnblindedTokenInfo& info);
+  UnblindedTokenInfo(const UnblindedTokenInfo& info);
   ~UnblindedTokenInfo();
 
-  bool operator==(
-      const UnblindedTokenInfo& rhs) const;
-  bool operator!=(
-      const UnblindedTokenInfo& rhs) const;
+  bool operator==(const UnblindedTokenInfo& rhs) const;
+  bool operator!=(const UnblindedTokenInfo& rhs) const;
 
   UnblindedToken value;
   PublicKey public_key;

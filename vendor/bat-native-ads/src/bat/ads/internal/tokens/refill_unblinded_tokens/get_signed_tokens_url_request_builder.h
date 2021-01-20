@@ -16,9 +16,8 @@ namespace ads {
 
 class GetSignedTokensUrlRequestBuilder : UrlRequestBuilder {
  public:
-  GetSignedTokensUrlRequestBuilder(
-      const WalletInfo& wallet,
-      const std::string& nonce);
+  GetSignedTokensUrlRequestBuilder(const WalletInfo& wallet,
+                                   const std::string& nonce);
 
   ~GetSignedTokensUrlRequestBuilder() override;
 
@@ -33,4 +32,4 @@ class GetSignedTokensUrlRequestBuilder : UrlRequestBuilder {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_TOKENS_REFILL_UNBLINDED_TOKENS_GET_SIGNED_TOKENS_URL_REQUEST_BUILDER_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_TOKENS_REFILL_UNBLINDED_TOKENS_GET_SIGNED_TOKENS_URL_REQUEST_BUILDER_H_  NOLINT

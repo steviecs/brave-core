@@ -17,10 +17,9 @@ namespace ads {
 
 const uint64_t kPromotedContentAdsPerDayFrequencyCap = 20;
 
-class PromotedContentAdsPerDayFrequencyCap : public PermissionRule  {
+class PromotedContentAdsPerDayFrequencyCap : public PermissionRule {
  public:
-  PromotedContentAdsPerDayFrequencyCap(
-      const AdEventList& ad_events);
+  explicit PromotedContentAdsPerDayFrequencyCap(const AdEventList& ad_events);
 
   ~PromotedContentAdsPerDayFrequencyCap() override;
 
@@ -38,13 +37,11 @@ class PromotedContentAdsPerDayFrequencyCap : public PermissionRule  {
 
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const AdEventList& ad_events);
+  bool DoesRespectCap(const AdEventList& ad_events);
 
-  AdEventList FilterAdEvents(
-      const AdEventList& ad_events) const;
+  AdEventList FilterAdEvents(const AdEventList& ad_events) const;
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_PROMOTED_CONTENT_ADS_PER_DAY_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_PERMISSION_RULES_PROMOTED_CONTENT_ADS_PER_DAY_FREQUENCY_CAP_H_  NOLINT

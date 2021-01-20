@@ -18,17 +18,13 @@ class ConfirmationType;
 struct AdEventInfo;
 struct AdInfo;
 
-void LogAdEvent(
-    const AdInfo& ad,
-    const ConfirmationType& confirmation_type,
-    AdEventCallback callback);
+void LogAdEvent(const AdInfo& ad,
+                const ConfirmationType& confirmation_type,
+                AdEventCallback callback);
 
-void LogAdEvent(
-    const AdEventInfo& ad_event,
-    AdEventCallback callback);
+void LogAdEvent(const AdEventInfo& ad_event, AdEventCallback callback);
 
-void PurgeExpiredAdEvents(
-    AdEventCallback callback);
+void PurgeExpiredAdEvents(AdEventCallback callback);
 
 }  // namespace ads
 

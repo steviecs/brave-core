@@ -13,7 +13,7 @@
 namespace ads {
 
 class AdsHistoryDescendingSort : public AdsHistorySort {
- public :
+ public:
   AdsHistoryDescendingSort();
   ~AdsHistoryDescendingSort() override;
 

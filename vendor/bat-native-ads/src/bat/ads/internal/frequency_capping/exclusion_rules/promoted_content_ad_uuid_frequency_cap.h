@@ -17,18 +17,16 @@ struct AdInfo;
 
 class PromotedContentAdUuidFrequencyCap : public ExclusionRule<AdInfo> {
  public:
-  PromotedContentAdUuidFrequencyCap(
-      const AdEventList& ad_events);
+  explicit PromotedContentAdUuidFrequencyCap(const AdEventList& ad_events);
 
   ~PromotedContentAdUuidFrequencyCap() override;
 
-  PromotedContentAdUuidFrequencyCap(
-      const PromotedContentAdUuidFrequencyCap&) = delete;
+  PromotedContentAdUuidFrequencyCap(const PromotedContentAdUuidFrequencyCap&) =
+      delete;
   PromotedContentAdUuidFrequencyCap& operator=(
       const PromotedContentAdUuidFrequencyCap&) = delete;
 
-  bool ShouldExclude(
-      const AdInfo& ad) override;
+  bool ShouldExclude(const AdInfo& ad) override;
 
   std::string get_last_message() const override;
 
@@ -37,14 +35,12 @@ class PromotedContentAdUuidFrequencyCap : public ExclusionRule<AdInfo> {
 
   std::string last_message_;
 
-  bool DoesRespectCap(
-      const AdEventList& ad_events);
+  bool DoesRespectCap(const AdEventList& ad_events);
 
-  AdEventList FilterAdEvents(
-      const AdEventList& ad_events,
-      const AdInfo& ad) const;
+  AdEventList FilterAdEvents(const AdEventList& ad_events,
+                             const AdInfo& ad) const;
 };
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_AD_EXCLUSION_RULES_PROMOTED_CONTENT_AD_UUID_FREQUENCY_CAP_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_FREQUENCY_CAPPING_AD_EXCLUSION_RULES_PROMOTED_CONTENT_AD_UUID_FREQUENCY_CAP_H_  NOLINT

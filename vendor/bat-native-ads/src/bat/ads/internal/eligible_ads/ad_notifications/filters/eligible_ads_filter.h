@@ -12,9 +12,7 @@ namespace ads {
 
 class EligibleAdsFilter {
  public:
-  enum class Type {
-    kPriority
-  };
+  enum class Type { kPriority };
 
   virtual ~EligibleAdsFilter() = default;
 
@@ -24,4 +22,4 @@ class EligibleAdsFilter {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_ELIGIBLE_ADS_AD_NOTIFICATIONS_FILTERS_ELIGIBLE_ADS_FILTER_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_ELIGIBLE_ADS_AD_NOTIFICATIONS_FILTERS_ELIGIBLE_ADS_FILTER_H_  NOLINT

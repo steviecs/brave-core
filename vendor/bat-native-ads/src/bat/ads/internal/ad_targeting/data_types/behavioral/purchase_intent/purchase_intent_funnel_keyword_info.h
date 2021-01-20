@@ -15,9 +15,8 @@ namespace ads {
 struct PurchaseIntentFunnelKeywordInfo {
  public:
   PurchaseIntentFunnelKeywordInfo();
-  PurchaseIntentFunnelKeywordInfo(
-      const std::string& keywords,
-      const uint16_t weight);
+  PurchaseIntentFunnelKeywordInfo(const std::string& keywords,
+                                  const uint16_t weight);
   ~PurchaseIntentFunnelKeywordInfo();
 
   std::string keywords;
@@ -26,4 +25,4 @@ struct PurchaseIntentFunnelKeywordInfo {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_FUNNEL_KEYWORD_INFO_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_TARGETING_DATA_TYPES_BEHAVIORAL_PURCHASE_INTENT_PURCHASE_INTENT_FUNNEL_KEYWORD_INFO_H_  NOLINT

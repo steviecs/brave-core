@@ -16,11 +16,11 @@ namespace ads {
 
 namespace privacy {
 struct UnblindedTokenInfo;
-}  // privacy
+}  // namespace privacy
 
 class CreateConfirmationUrlRequestBuilder : UrlRequestBuilder {
  public:
-  CreateConfirmationUrlRequestBuilder(
+  explicit CreateConfirmationUrlRequestBuilder(
       const ConfirmationInfo& confirmation);
 
   ~CreateConfirmationUrlRequestBuilder() override;
@@ -39,4 +39,4 @@ class CreateConfirmationUrlRequestBuilder : UrlRequestBuilder {
 
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_TOKEN_CREATE_CONFIRMATION_URL_REQUEST_BUILDER_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_TOKENS_REDEEM_UNBLINDED_TOKEN_CREATE_CONFIRMATION_URL_REQUEST_BUILDER_H_  NOLINT

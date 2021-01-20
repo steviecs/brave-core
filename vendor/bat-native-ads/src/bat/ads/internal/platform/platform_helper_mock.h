@@ -8,8 +8,8 @@
 
 #include <string>
 
-#include "testing/gmock/include/gmock/gmock.h"
 #include "bat/ads/internal/platform/platform_helper.h"
+#include "testing/gmock/include/gmock/gmock.h"
 
 namespace ads {
 

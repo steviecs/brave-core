@@ -22,20 +22,15 @@ class UnblindedTokens {
   UnblindedTokenList GetAllTokens() const;
   base::Value GetTokensAsList();
 
-  void SetTokens(
-      const UnblindedTokenList& unblinded_tokens);
-  void SetTokensFromList(
-      const base::Value& list);
+  void SetTokens(const UnblindedTokenList& unblinded_tokens);
+  void SetTokensFromList(const base::Value& list);
 
-  void AddTokens(
-      const UnblindedTokenList& unblinded_tokens);
+  void AddTokens(const UnblindedTokenList& unblinded_tokens);
 
-  bool RemoveToken(
-      const UnblindedTokenInfo& unblinded_token);
+  bool RemoveToken(const UnblindedTokenInfo& unblinded_token);
   void RemoveAllTokens();
 
-  bool TokenExists(
-      const UnblindedTokenInfo& unblinded_token);
+  bool TokenExists(const UnblindedTokenInfo& unblinded_token);
 
   int Count() const;
 

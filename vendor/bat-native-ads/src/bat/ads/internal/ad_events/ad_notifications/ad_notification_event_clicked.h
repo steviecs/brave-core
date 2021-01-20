@@ -20,11 +20,10 @@ class AdEventClicked : public AdEvent<AdNotificationInfo> {
 
   ~AdEventClicked() override;
 
-  void FireEvent(
-      const AdNotificationInfo& ad) override;
+  void FireEvent(const AdNotificationInfo& ad) override;
 };
 
 }  // namespace ad_notifications
 }  // namespace ads
 
-#endif  // BAT_ADS_INTERNAL_AD_EVENTS_AD_NOTIFICATIONS_AD_NOTIFICATION_EVENT_CLICKED_H_  // NOLINT
+#endif  // BAT_ADS_INTERNAL_AD_EVENTS_AD_NOTIFICATIONS_AD_NOTIFICATION_EVENT_CLICKED_H_  NOLINT

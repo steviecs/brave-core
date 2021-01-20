@@ -18,13 +18,11 @@ namespace ads {
 
 struct AdPreferencesInfo {
   AdPreferencesInfo();
-  AdPreferencesInfo(
-      const AdPreferencesInfo& info);
+  AdPreferencesInfo(const AdPreferencesInfo& info);
   ~AdPreferencesInfo();
 
   std::string ToJson() const;
-  Result FromJson(
-      const std::string& json);
+  Result FromJson(const std::string& json);
 
   FilteredAdList filtered_ads;
   FilteredCategoryList filtered_categories;

@@ -16,49 +16,39 @@ namespace ads {
 
 struct NewTabPageAdInfo;
 
-class NewTabPageAd
-    : public NewTabPageAdObserver {
+class NewTabPageAd : public NewTabPageAdObserver {
  public:
   NewTabPageAd();
 
   ~NewTabPageAd() override;
 
-  void AddObserver(
-      NewTabPageAdObserver* observer);
-  void RemoveObserver(
-      NewTabPageAdObserver* observer);
+  void AddObserver(NewTabPageAdObserver* observer);
+  void RemoveObserver(NewTabPageAdObserver* observer);
 
-  void FireEvent(
-      const std::string& uuid,
-      const std::string& creative_instance_id,
-      const NewTabPageAdEventType event_type);
+  void FireEvent(const std::string& uuid,
+                 const std::string& creative_instance_id,
+                 const NewTabPageAdEventType event_type);
 
  private:
   base::ObserverList<NewTabPageAdObserver> observers_;
 
-  bool ShouldFireEvent(
-      const NewTabPageAdInfo& ad,
-      const AdEventList& ad_events);
+  bool ShouldFireEvent(const NewTabPageAdInfo& ad,
+                       const AdEventList& ad_events);
 
-  void FireEvent(
-      const NewTabPageAdInfo& ad,
-      const std::string& uuid,
-      const std::string& creative_instance_id,
-      const NewTabPageAdEventType event_type);
+  void FireEvent(const NewTabPageAdInfo& ad,
+                 const std::string& uuid,
+                 const std::string& creative_instance_id,
+                 const NewTabPageAdEventType event_type);
 
-  void NotifyNewTabPageAdEvent(
-      const NewTabPageAdInfo& ad,
-      const NewTabPageAdEventType event_type);
+  void NotifyNewTabPageAdEvent(const NewTabPageAdInfo& ad,
+                               const NewTabPageAdEventType event_type);
 
-  void NotifyNewTabPageAdViewed(
-      const NewTabPageAdInfo& ad);
-  void NotifyNewTabPageAdClicked(
-      const NewTabPageAdInfo& ad);
+  void NotifyNewTabPageAdViewed(const NewTabPageAdInfo& ad);
+  void NotifyNewTabPageAdClicked(const NewTabPageAdInfo& ad);
 
-  void NotifyNewTabPageAdEventFailed(
-      const std::string& uuid,
-      const std::string& creative_instance_id,
-      const NewTabPageAdEventType event_type);
+  void NotifyNewTabPageAdEventFailed(const std::string& uuid,
+                                     const std::string& creative_instance_id,
+                                     const NewTabPageAdEventType event_type);
 };
 
 }  // namespace ads
