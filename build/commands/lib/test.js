@@ -61,6 +61,12 @@ const test = (suite, buildConfig = config.defaultBuildConfig, options) => {
     braveArgs.push('--test-launcher-jobs=' + options.test_launcher_jobs)
   }
 
+  if (options.test_timeout) {
+    // We pass the value to test_timeout in seconds for convenience, but the
+    // GTest --test-launcher-timeout parameter accepts milliseconds instead.
+    braveArgs.push('--test-launcher-timeout=' + options.test_timeout * 1000)
+  }
+
   // Build the tests
   if (suite === 'brave_unit_tests' || suite === 'brave_browser_tests') {
     util.run('ninja', ['-C', config.outputDir, "brave/test:" + suite], config.defaultOptions)

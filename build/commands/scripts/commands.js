@@ -207,6 +207,7 @@ program
   .option('--disable_brave_extension', 'disable loading the Brave extension')
   .option('--single_process', 'uses a single process to run tests to help with debugging')
   .option('--test_launcher_jobs <test_launcher_jobs>', 'Number of jobs to launch', parseInteger, '4')
+  .option('--test_timeout [timeout]', 'Maximum timeout per test in seconds', parseInteger, '45')
   .option('--target_os <target_os>', 'target OS')
   .option('--target_arch <target_arch>', 'target architecture')
   .option('--run_disabled_tests', 'run disabled tests')
